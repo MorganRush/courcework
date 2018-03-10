@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PostgreSQL - postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <role id="3" parent="1" name="Matvey">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <role id="4" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <schema id="5" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-03-08.15:16:21.382</IntrospectionTimestamp>
+      <IntrospectionStateNumber>552</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="6" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <sequence id="11" parent="5" name="contracts_id_seq">
+      <ObjectId>16418</ObjectId>
+      <StateNumber>552</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="12" parent="5" name="players_id_seq">
+      <ObjectId>16402</ObjectId>
+      <StateNumber>548</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="13" parent="5" name="teams_id_seq">
+      <ObjectId>16410</ObjectId>
+      <StateNumber>550</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="14" parent="5" name="SequelizeMeta">
+      <ObjectId>16397</ObjectId>
+      <StateNumber>547</StateNumber>
+    </table>
+    <table id="15" parent="5" name="contracts">
+      <ObjectId>16420</ObjectId>
+      <StateNumber>552</StateNumber>
+    </table>
+    <table id="16" parent="5" name="players">
+      <ObjectId>16404</ObjectId>
+      <StateNumber>552</StateNumber>
+    </table>
+    <table id="17" parent="5" name="teams">
+      <ObjectId>16412</ObjectId>
+      <StateNumber>552</StateNumber>
+    </table>
+    <column id="18" parent="14" name="name">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>547</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="19" parent="14" name="SequelizeMeta_pkey">
+      <ObjectId>16400</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="20" parent="14" name="SequelizeMeta_pkey">
+      <ObjectId>16401</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>SequelizeMeta_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>552</StateNumber>
+      <DefaultExpression>nextval(&apos;contracts_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>contracts_id_seq</SequenceName>
+    </column>
+    <column id="22" parent="15" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>552</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="23" parent="15" name="playerID">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>552</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="24" parent="15" name="teamID">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>552</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="25" parent="15" name="createdAt">
+      <Position>5</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>552</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="26" parent="15" name="updatedAt">
+      <Position>6</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>552</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="27" parent="15" name="contracts_pkey">
+      <ObjectId>16424</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="15" name="contracts_pkey">
+      <ObjectId>16425</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>contracts_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="29" parent="15" name="contracts_playerID_fkey">
+      <ObjectId>16426</ObjectId>
+      <ColNames>playerID</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>players</RefTableName>
+      <RefKeyName>players_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="30" parent="15" name="contracts_teamID_fkey">
+      <ObjectId>16431</ObjectId>
+      <ColNames>teamID</ColNames>
+      <RefTableId>16412</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="31" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>548</StateNumber>
+      <DefaultExpression>nextval(&apos;players_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>players_id_seq</SequenceName>
+    </column>
+    <column id="32" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>548</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="33" parent="16" name="surname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>548</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="34" parent="16" name="createdAt">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>548</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="35" parent="16" name="updatedAt">
+      <Position>5</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>548</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="36" parent="16" name="players_pkey">
+      <ObjectId>16408</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="16" name="players_pkey">
+      <ObjectId>16409</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>players_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>550</StateNumber>
+      <DefaultExpression>nextval(&apos;teams_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>teams_id_seq</SequenceName>
+    </column>
+    <column id="39" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>550</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="40" parent="17" name="createdAt">
+      <Position>3</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>550</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="41" parent="17" name="updatedAt">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>550</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="42" parent="17" name="teams_pkey">
+      <ObjectId>16416</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="17" name="teams_pkey">
+      <ObjectId>16417</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>teams_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
