@@ -1,5 +1,5 @@
-const player = require('./player');
+const playerController = require('./playerController');
 
 module.exports = {
-    player,
+    playerController,
 };

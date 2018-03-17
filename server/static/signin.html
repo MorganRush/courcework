@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PIPFUT</title>
+    <script>
+        window.onload = function () {
+            let info = document.URL+"";
+            if (info.indexOf("error")+1){
+                alert("Логин или пароль не верны");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <header>
+            <h3>Авторизация</h3>
+        </header>
+        <div>
+            <form method="POST" action="/">
+                <input type="text" id="login" placeholder="Логин" name="login"/> <br/>
+                <input type="password" id="password" placeholder="Пароль" name="password"/> <br/>
+                <button type="submit" id="button">Войти</button><br/>
+                <a href="signup.html">Регистрация</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

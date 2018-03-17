@@ -9,5 +9,23 @@
       <secret-storage>master_key</secret-storage>
       <introspection-schemas>postgres:public</introspection-schemas>
     </data-source>
+    <data-source name="studs@pg" uuid="6f77997c-7826-4f9a-943f-4f271a488838">
+      <database-info product="PostgreSQL" version="9.6.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>s225150</user-name>
+      <introspection-schemas>studs:s225150</introspection-schemas>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>se.ifmo.ru</proxy-host>
+        <proxy-port>2222</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>s225150</user>
+        <use-password>true</use-password>
+        <auth-type>PASSWORD</auth-type>
+      </ssh-properties>
+    </data-source>
   </component>
 </project>
