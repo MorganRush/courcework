@@ -18,13 +18,20 @@ module.exports = {
             .then(players => res.status(200).send(players))
             .catch(error => res.status(400).send(error));
     },
+    listLimit(req, res){
+        return Players
+            .findAll({ limit: 10 })
+            .then(players => res.status(200).send(players))
+            .catch(error => res.status(400).send(error));
+    },
     listTeam(req, res){
         return Contracts
             .findAll({
                 include:[{
-                    model: Players,
+                    model: Players, as: 'player'
                     },{
-                    model: Teams,
+                    model: Teams, as: 'team',
+                    where: { name: req.body.name }
                 }],
             })
             .then(players => res.status(200).send(players))

@@ -11,6 +11,14 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey: 'teamID',
           as: 'contracts',
       });
+      teams.hasMany(models.teamStatistics, {
+          foreignKey: 'teamID',
+          as: 'teamStatistics',
+      });
+      teams.belongsTo(models.cities, {
+          foreignKey: 'cityID',
+          onDelete: 'SET NULL',
+      });
   };
   return teams;
 };
