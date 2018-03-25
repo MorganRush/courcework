@@ -12,6 +12,15 @@ module.exports = {
             allowNull: false,
             type: Sequelize.STRING,
         },
+        cityId: {
+            references: {
+                model: 'cities',
+                key: 'id',
+                as: 'teams'
+            },
+            onDelete: 'SET NULL',
+            type: Sequelize.INTEGER,
+        },
         createdAt: {
             allowNull: true,
             type: Sequelize.DATE
@@ -19,16 +28,7 @@ module.exports = {
         updatedAt: {
             allowNull: true,
             type: Sequelize.DATE
-        },
-        // cityID: {
-        //     references: {
-        //         model: 'cities',
-        //         key: 'id',
-        //         as: 'teams'
-        //     },
-        //     onDelete: 'SET NULL',
-        //     type: Sequelize.INTEGER,
-        // },
+        }
     });
   },
   down: (queryInterface, Sequelize) => {

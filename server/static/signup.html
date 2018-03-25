@@ -2,7 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="singup.css">
     <title>PIPFUT</title>
+    <script>
+        window.onload = function () {
+            let info = document.URL+"";
+            if (info.indexOf("error")+1){
+                alert("Логин или пароль не верны");
+            }
+        }
+    </script>
 </head>
 <body>
     <div id="loginPageWrapper">
@@ -13,6 +22,7 @@
                 <input type="password" id="password" placeholder="Пароль" name="password"/> <br/>
                 <input type="password" id="repeatPassword" placeholder="Пароль" name="repeatPassword"/> <br/>
                 <button type="submit" id="button">Регистрация</button><br/>
+                <hr>
                 <a href="signin.html">У вас уже есть аккаунт</a>
             </form>
         </div>

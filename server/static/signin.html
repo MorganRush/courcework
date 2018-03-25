@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>PIPFUT</title>
+	<link rel="stylesheet" type="text/css" href="singin.css">
     <script>
         window.onload = function () {
             let info = document.URL+"";
@@ -11,16 +12,9 @@
             }
         }
     </script>
-    <style type="text/css">
-        div header h3 {
-            font-family: Verdana, Arial, Helvetica, sans-serif;
-            color: #336;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
-    <div>
+    <div id="div1">
         <header>
             <h3>Авторизация</h3>
         </header>
@@ -28,8 +22,8 @@
             <form method="POST" action="/signin">
                 <input type="text" id="login" placeholder="Логин" name="login"/> <br/>
                 <input type="password" id="password" placeholder="Пароль" name="password"/> <br/>
-                <button type="submit" id="button">Войти</button><br/>
-                <a href="signup.html">Регистрация</a>
+                <button type="submit" id="button">Войти</button>
+                <a href="signup.html" id="href1">Регистрация</a>
             </form>
         </div>
     </div>

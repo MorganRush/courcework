@@ -1,0 +1,53 @@
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background:linear-gradient(#cc0000, black);
+  background-repeat:no-repeat;
+  width: 100%;
+  height: 100%;
+}
+#div1 {
+  position:fixed;
+  top:30%;
+  left:40%;
+}
+input[type=text],[type=password] {
+    padding:10px 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+#password{
+margin-top:10px;
+}
+button,#href1{
+  background-color:white;
+  margin-top:10px;
+  border-radius:5px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 1.2em;
+  outline: none;
+  border: 1px solid rgba(0,0,0,.1);
+  background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+  transition: all .218s ease 0s;
+}
+button:hover,#href1:hover{
+  color: rgb(24,24,24);
+  border: 1px solid rgb(198,198,198);
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+button:active,#href1:active{
+    color: rgb(51,51,51);
+  border: 1px solid rgb(204,204,204);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+#href1{
+  margin-left:32px
+}

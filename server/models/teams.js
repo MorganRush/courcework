@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
           as: 'teamStatistics',
       });
       teams.belongsTo(models.cities, {
-          foreignKey: 'cityID',
+          foreignKey: 'cityId',
           onDelete: 'SET NULL',
       });
   };

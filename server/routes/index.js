@@ -21,19 +21,19 @@ module.exports = (app, passport) => {
 
     app.get('/signin', isNotLoggedIn, authorizationController.signin);
     app.get('/signup', isNotLoggedIn, authorizationController.signup);
-    app.get('logout', isNotLoggedIn, authorizationController.logout);
+    app.get('/logout', isLoggedIn, authorizationController.logout);
 
     app.post('/signin', passport.authenticate('local-signin', {
         badRequestMessage: 'Заполните ВСЕ поля.',
         successRedirect: '/api',
-        failureRedirect: '/signin',
+        failureRedirect: '/signin.html?error=true',
         failureFlash: true
     }));
 
     app.post('/signup', passport.authenticate('local-signup', {
         badRequestMessage: 'Заполните ВСЕ поля.',
-        successRedirect: '/signin',
-        failureRedirect: '/signup',
+        successRedirect: '/api',
+        failureRedirect: '/signup.html?error=true',
         failureFlash: true,
     }));
 
@@ -41,6 +41,7 @@ module.exports = (app, passport) => {
         message: 'lol',
     }));
     app.post('/api/add', isLoggedIn, playerController.create);
-    app.get('/api/players', isLoggedIn, playerController.list);
-    app.get('/api/list', isLoggedIn, playerController.listTeam);
+    app.get('/api/players', playerController.list);
+    app.get('/api/teams/:team/players', playerController.listTeam);
+    app.get('/api/players/:limit', playerController.listLimit);
 };

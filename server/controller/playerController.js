@@ -20,7 +20,7 @@ module.exports = {
     },
     listLimit(req, res){
         return Players
-            .findAll({ limit: 10 })
+            .findAll({ limit: req.params.limit })
             .then(players => res.status(200).send(players))
             .catch(error => res.status(400).send(error));
     },
@@ -31,16 +31,45 @@ module.exports = {
                     model: Players, as: 'player'
                     },{
                     model: Teams, as: 'team',
-                    where: { name: req.body.name }
+                    where: { name: req.params.team }
                 }],
             })
-            .then(players => res.status(200).send(players))
+            .then(contracts => res.status(200).send(contracts))
             .catch(error => res.status(400).send(error));
     },
     update(req, res) {
         return Players
+            .findById(req.params.id)
+            .then(player => {
+                if (!player) {
+                    return res.status(404).send({
+                        message: 'Player Not Found',
+                    });
+                }
+                return player
+                    .update({
+                        name: req.body.name || player.name,
+                    })
+                    .then(() => res.status(200).send(player))
+                    .catch((error) => res.status(400).send(error));
+            })
+            .catch((error) => res.status(400).send(error));
     },
+
     delete(req, res){
         return Players
+            .findById(req.params.id)
+            .then(player => {
+                if (!player) {
+                    return res.status(400).send({
+                        message: 'Player Not Found',
+                    });
+                }
+                return player
+                    .destroy()
+                    .then(() => res.status(204).send())
+                    .catch(error => res.status(400).send(error));
+            })
+            .catch(error => res.status(400).send(error));
     }
 };
