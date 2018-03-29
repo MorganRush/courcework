@@ -1,99 +1,56 @@
-const http = require('http');
-const Teams = require("../models").teams;
+const request = require("request");
+const cheerio = require("cheerio");
+const fs = require('fs');
+
+const urlStart = "http://www.futhead.com/18/players/?page=";
+const urlEnd = "&bin_platform=ps";
 
 module.exports = {
 
     load(){
-        const http = require('http');
+        const players = [];
 
-        const options = {
-            host: "34.217.13.170",
-            port: 8888,
-            path: "http://api.football-data.org/v1/competitions/?season=2017",
-            headers: {
-                Host: "api.football-data.org"
-            }
-        };
+        for (let j = 1; j <= 120; j++){
+            request((urlStart + j + urlEnd), function (error, response, body) {
+                if (!error) {
+                    const $ = cheerio.load(body);
+                    const playerNames = $('.player-name');
+                    const playerStatistics = $('.value');
+                    const playersReiting = $('.player-rating.stream-col-50.text-center');
+                    const playerCLNs = $('.player-club-league-name');
+                    const playerImages = $('.player-image');
+                    const playerClubs = $('.player-club');
+                    const playerNations = $('.player-nation');
 
-        http.get(options, (res) => {
-            const { statusCode } = res;
-            const contentType = res.headers['content-type'];
-            let error;
-            if (statusCode !== 200) {
-                error = new Error('Request Failed.\n' +
-                    `Status Code: ${statusCode}`);
-            } else if (!/^application\/json/.test(contentType)) {
-                error = new Error('Invalid content-type.\n' +
-                    `Expected application/json but received ${contentType}`);
-            }
-            if (error) {
-                console.error(error.message);
-                // consume response data to free up memory
-                res.resume();
-                return;
-            }
-
-            res.setEncoding('utf8');
-            let rawData = '';
-            res.on('data', (chunk) => { rawData += chunk; });
-            res.on('end', () => {
-                try {
-                    const parsedData = JSON.parse(rawData);
-                    for (let i = 0; i < 1; i++){
-                        let optionsTeam = {
-                            host: "34.217.13.170",
-                            port: 8888,
-                            path: ('http://api.football-data.org/v1/competitions/88/teams'),
-                            headers: {
-                                Host: "api.football-data.org"
-                            }
-                        };
-                        http.get(optionsTeam, (res) => {
-                            res.setEncoding('utf8');
-                            let rawData = '';
-                            res.on('data', (chunk) => { rawData += chunk; });
-                            res.on('end', () => {
-                                const parsData = JSON.parse(rawData);
-                                for (let j = 0; j < 1; j++){
-                                    let str = parsData.teams[j]._links.players.href.substring(38);
-                                    let teamID = parseInt(str);
-                                    //////////////////////////////////////////////
-                                    //console.log(parsedData[i].id);
-                                    console.log(teamID);
-                                    console.log(parsData.teams[j].name);
-                                    let optionsPlayers = {
-                                        host: "34.217.13.170",
-                                        port: 8888,
-                                        path: ('http://api.football-data.org/v1/teams/' + teamID + '/players'),
-                                        headers: {
-                                            Host: "api.football-data.org"
-                                        }
-                                    };
-                                    http.get(optionsPlayers, (res) => {
-                                        res.setEncoding('utf8');
-                                        let rawData = '';
-                                        res.on('data', (chunk) => { rawData += chunk; });
-                                        res.on('end', () => {
-                                            try{
-                                                const pData = JSON.parse(rawData);
-                                                for (let k = 0; k < pData.length; k++){
-                                                    console.log("lol");
-                                                    console.log(pData.players[i].name);
-                                                }
-                                            } catch (e){
-                                                console.error(e.message);
-                                            }
-                                        })
-                                    })
-                                }
-                            });
-                        })
+                    for (let i = 0; i < 44; i++){
+                        const player = {};
+                        player.name = playerNames[i].children[0].data;
+                        player.reiting = playersReiting[i].children[1].children[0].data;
+                        player.pac = playerStatistics[i*10 + 0].children[0].data;
+                        player.sho = playerStatistics[i*10 + 1].children[0].data;
+                        player.pas = playerStatistics[i*10 + 2].children[0].data;
+                        player.dri = playerStatistics[i*10 + 3].children[0].data;
+                        player.def = playerStatistics[i*10 + 4].children[0].data;
+                        player.phy = playerStatistics[i*10 + 5].children[0].data;
+                        player.cln = playerCLNs[i].children[2].data;
+                        player.refImage = playerImages[i].attribs.src;
+                        player.refClubs = playerClubs[0].attribs.src;
+                        player.refNations = playerNations[0].attribs.src;
+                        players.push(player);
                     }
-                } catch (e) {
-                    console.log("lol");
-                    console.error(e.message);
+                    if (j === 120){
+                        //console.log(players);
+                        fs.writeFile('players.json', JSON.stringify(players), (err) => {
+                            if (err){
+                                throw err;
+                            }
+                            console.log('The file has been saved!');
+                        });
+                    }
+                } else {
+                    console.log("Произошла ошибка: " + error);
                 }
             });
-        })
+        }
     }
 };

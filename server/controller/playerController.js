@@ -1,6 +1,8 @@
 const Players = require('../models').players;
 const Contracts = require("../models").contracts;
 const Teams = require("../models").teams;
+const Cities = require('../models').cities;
+const Countries = require('../models').countries;
 
 module.exports = {
     create(req, res){
@@ -24,7 +26,7 @@ module.exports = {
             .then(players => res.status(200).send(players))
             .catch(error => res.status(400).send(error));
     },
-    listTeam(req, res){
+    listByTeam(req, res){
         return Contracts
             .findAll({
                 include:[{
@@ -33,6 +35,41 @@ module.exports = {
                     model: Teams, as: 'team',
                     where: { name: req.params.team }
                 }],
+            })
+            .then(contracts => res.status(200).send(contracts))
+            .catch(error => res.status(400).send(error));
+    },
+    listByCity(req, res){
+        return Contracts
+            .findAll({
+                include:[{
+                    model: Players, as: 'player'
+                },{
+                    model: Teams, as: 'team',
+                    include:[{
+                        model: Cities, as: 'city',
+                        where: { name: req.params.city }
+                    }]
+                }]
+            })
+            .then(contracts => res.status(200).send(contracts))
+            .catch(error => res.status(400).send(error));
+    },
+    listByCountry(req, res){
+        return Contracts
+            .findAll({
+                include:[{
+                    model: Players, as: 'player'
+                },{
+                    model: Teams, as: 'team',
+                    include:[{
+                        model: Cities, as: 'city',
+                        include:[{
+                            model: Countries, as: 'country',
+                            where: { name: req.params.country }
+                        }]
+                    }]
+                }]
             })
             .then(contracts => res.status(200).send(contracts))
             .catch(error => res.status(400).send(error));
@@ -55,7 +92,6 @@ module.exports = {
             })
             .catch((error) => res.status(400).send(error));
     },
-
     delete(req, res){
         return Players
             .findById(req.params.id)

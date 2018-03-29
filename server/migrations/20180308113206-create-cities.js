@@ -19,7 +19,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      countryID: {
+      countryId: {
         references: {
           model: 'countries',
           key: 'id',

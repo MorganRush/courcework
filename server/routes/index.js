@@ -38,10 +38,11 @@ module.exports = (app, passport) => {
     }));
 
     app.get('/api', isLoggedIn, (req, res) => res.status(200).send({
-        message: 'lol',
+        message: 'hw',
     }));
     app.post('/api/add', isLoggedIn, playerController.create);
     app.get('/api/players', playerController.list);
-    app.get('/api/teams/:team/players', playerController.listTeam);
+    app.get('/api/teams/:team/players', playerController.listByTeam);
     app.get('/api/players/:limit', playerController.listLimit);
+    app.get('/api/cities/:city/players', playerController.listByCity);
 };
