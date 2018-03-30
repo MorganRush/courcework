@@ -4,6 +4,10 @@ module.exports = (sequelize, DataTypes) => {
       name: {
           type: DataTypes.STRING,
           allowNull: false,
+      },
+      refClubs: {
+          type: DataTypes.STRING,
+          allowNull: false,
       }
   });
   teams.associate = (models) => {
@@ -11,12 +15,12 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey: 'teamID',
           as: 'contracts',
       });
-      teams.hasMany(models.teamStatistics, {
-          foreignKey: 'teamID',
-          as: 'teamStatistics',
-      });
-      teams.belongsTo(models.cities, {
-          foreignKey: 'cityId',
+      // teams.hasMany(models.teamStatistics, {
+      //     foreignKey: 'teamID',
+      //     as: 'teamStatistics',
+      // });
+      teams.belongsTo(models.countries, {
+          foreignKey: 'countryId',
           onDelete: 'SET NULL',
       });
   };

@@ -5,7 +5,35 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.STRING,
           allowNull: false,
       },
-      surname: {
+      reiting: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+      },
+      pac: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+      },
+      sho: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+      },
+      pas: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+      },
+      dri: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+      },
+      def: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+      },
+      phy: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+      },
+      refImage: {
           type: DataTypes.STRING,
           allowNull: false,
       }
@@ -15,10 +43,10 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey: 'playerID',
           as: 'contracts',
       });
-      players.hasMany(models.playerStatistics, {
-          foreignKey: 'playerID',
-          as: 'playerStatistics',
-      });
+      // players.hasMany(models.playerStatistics, {
+      //     foreignKey: 'playerID',
+      //     as: 'playerStatistics',
+      // });
   };
   return players;
 };

@@ -4,13 +4,20 @@ const fs = require('fs');
 
 const urlStart = "http://www.futhead.com/18/players/?page=";
 const urlEnd = "&bin_platform=ps";
+const data = require('./players');
+
+const Players = require('../models').players;
+const Contracts = require("../models").contracts;
+const Teams = require("../models").teams;
+const Cities = require('../models').cities;
+const Countries = require('../models').countries;
 
 module.exports = {
 
-    load(){
+    loadFromFuthead(){
         const players = [];
 
-        for (let j = 1; j <= 120; j++){
+        for (let j = 1; j <= 100; j++){
             request((urlStart + j + urlEnd), function (error, response, body) {
                 if (!error) {
                     const $ = cheerio.load(body);
@@ -38,7 +45,7 @@ module.exports = {
                         player.refNations = playerNations[0].attribs.src;
                         players.push(player);
                     }
-                    if (j === 120){
+                    if (j === 100){
                         //console.log(players);
                         fs.writeFile('players.json', JSON.stringify(players), (err) => {
                             if (err){
@@ -51,6 +58,15 @@ module.exports = {
                     console.log("Произошла ошибка: " + error);
                 }
             });
+        }
+    },
+
+    addToDB(){
+        for (let i = 0; i < data.length; i++){
+            Players
+                .create({
+                    name: data[i].name
+                })
         }
     }
 };

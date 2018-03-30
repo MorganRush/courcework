@@ -39,22 +39,6 @@ module.exports = {
             .then(contracts => res.status(200).send(contracts))
             .catch(error => res.status(400).send(error));
     },
-    listByCity(req, res){
-        return Contracts
-            .findAll({
-                include:[{
-                    model: Players, as: 'player'
-                },{
-                    model: Teams, as: 'team',
-                    include:[{
-                        model: Cities, as: 'city',
-                        where: { name: req.params.city }
-                    }]
-                }]
-            })
-            .then(contracts => res.status(200).send(contracts))
-            .catch(error => res.status(400).send(error));
-    },
     listByCountry(req, res){
         return Contracts
             .findAll({
@@ -63,11 +47,8 @@ module.exports = {
                 },{
                     model: Teams, as: 'team',
                     include:[{
-                        model: Cities, as: 'city',
-                        include:[{
-                            model: Countries, as: 'country',
-                            where: { name: req.params.country }
-                        }]
+                        model: Countries, as: 'country',
+                        where: { name: req.params.country }
                     }]
                 }]
             })

@@ -44,5 +44,5 @@ module.exports = (app, passport) => {
     app.get('/api/players', playerController.list);
     app.get('/api/teams/:team/players', playerController.listByTeam);
     app.get('/api/players/:limit', playerController.listLimit);
-    app.get('/api/cities/:city/players', playerController.listByCity);
+    app.get('/api/countries/:country/players', playerController.listByCountry);
 };

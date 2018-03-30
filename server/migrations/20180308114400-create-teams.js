@@ -12,13 +12,17 @@ module.exports = {
             allowNull: false,
             type: Sequelize.STRING,
         },
-        cityId: {
+        refClubs: {
+            type: Sequelize.STRING,
+            allowNull: false,
+        },
+        countryId: {
             references: {
-                model: 'cities',
+                model: 'countries',
                 key: 'id',
-                as: 'teams'
+                as: 'cities'
             },
-            onDelete: 'SET NULL',
+            onDelete: 'CASCADE',
             type: Sequelize.INTEGER,
         },
         createdAt: {
