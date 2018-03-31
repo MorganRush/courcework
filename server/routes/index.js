@@ -1,5 +1,7 @@
 const playerController = require('../controller').playerController;
 const authorizationController = require('../controller').authorizationController;
+const teamController = require('../controller').teamController;
+const countriesController = require('../controller').countriesController;
 const load = require('../load').load;
 
 module.exports = (app, passport) => {
@@ -13,11 +15,11 @@ module.exports = (app, passport) => {
     const isNotLoggedIn = (req, resp, next) => {
         if (!req.isAuthenticated())
             return next();
-        resp.redirect('/api');
+        resp.redirect('/main');
     };
 
     app.get('/', (req, res) =>{
-        res.redirect('/signin');
+        res.redirect('/main');
     });
 
     app.get('/signin', isNotLoggedIn, authorizationController.signin);
@@ -26,27 +28,29 @@ module.exports = (app, passport) => {
 
     app.post('/signin', passport.authenticate('local-signin', {
         badRequestMessage: 'Заполните ВСЕ поля.',
-        successRedirect: '/api',
+        successRedirect: '/main',
         failureRedirect: '/signin.html?error=true',
         failureFlash: true
     }));
-
     app.post('/signup', passport.authenticate('local-signup', {
         badRequestMessage: 'Заполните ВСЕ поля.',
-        successRedirect: '/api',
+        successRedirect: '/main',
         failureRedirect: '/signup.html?error=true',
         failureFlash: true,
     }));
 
-    app.get('/api', isLoggedIn, (req, res) => res.status(200).send({
+    app.get('/main', isLoggedIn, (req, res) => res.status(200).send({
         message: 'hw',
     }));
-    app.post('/api/add', isLoggedIn, playerController.create);
-    app.get('/api/players', playerController.list);
-    app.get('/api/teams/:team/players', playerController.listByTeam);
-    app.get('/api/players/:limit', playerController.listLimit);
-    app.get('/api/countries/:country/players', playerController.listByCountry);
-    app.get('/api/full', playerController.listFull);
 
-    app.get('/api/test', load.addToDB);
+    app.get('/main/players/team/:team', playerController.listByTeam);
+    app.get('/main/players/:limit', playerController.listLimit);
+    app.get('/main/players/country/:country', playerController.listByCountry);
+    app.get('/main/players', playerController.list);
+
+    app.get('/main/teams', teamController.list);
+    app.get('/main/teams/:limit', teamController.listLimit);
+    app.get('/main/teams/country/:country', teamController.listByCountry);
+
+    app.get('/main/test', load.addToDB);
 };

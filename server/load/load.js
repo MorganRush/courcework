@@ -62,7 +62,14 @@ module.exports = {
     },
 
     addToDB(req, res){
-        let i = 1;
+        // for (let i = 0; i < data.length; i++ ){
+        //     if (data[i].name === "Alex Sandro"){
+        //         console.log(i);
+        //         return;
+        //     }
+        // }
+        //console.log(data.length);
+        let i = 180;
         Countries
             .create({
                 refNations: data[i].refNations

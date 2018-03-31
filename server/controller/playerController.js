@@ -1,29 +1,38 @@
 const Players = require('../models').players;
 const Contracts = require("../models").contracts;
 const Teams = require("../models").teams;
-const Cities = require('../models').cities;
 const Countries = require('../models').countries;
 
 module.exports = {
-    create(req, res){
-        return Players
-            .create({
-                name: req.body.name,
-                surname: req.body.surname,
+    list(req, res){
+        return Contracts
+            .findAll({
+                include:[{
+                    model: Players, as: 'player'
+                },{
+                    model: Teams, as: 'team',
+                    include:[{
+                        model: Countries, as: 'country',
+                    }]
+                }]
             })
-            .then((player) => res.status(201).send(player))
-            .catch((error) => res.status(400).send(error));
-    },
-    list(req, res) {
-        return Players
-            .all()
-            .then(players => res.status(200).send(players))
+            .then(contracts => res.status(200).send(contracts))
             .catch(error => res.status(400).send(error));
     },
     listLimit(req, res){
-        return Players
-            .findAll({ limit: req.params.limit })
-            .then(players => res.status(200).send(players))
+        return Contracts
+            .findAll({
+                limit: req.params.limit,
+                include:[{
+                    model: Players, as: 'player'
+                },{
+                    model: Teams, as: 'team',
+                    include:[{
+                        model: Countries, as: 'country',
+                    }]
+                }]
+            })
+            .then(contracts => res.status(200).send(contracts))
             .catch(error => res.status(400).send(error));
     },
     listByTeam(req, res){
@@ -33,7 +42,10 @@ module.exports = {
                     model: Players, as: 'player'
                     },{
                     model: Teams, as: 'team',
-                    where: { name: req.params.team }
+                    where: { name: req.params.team },
+                    include:[{
+                        model: Countries, as: 'country',
+                    }]
                 }],
             })
             .then(contracts => res.status(200).send(contracts))
@@ -55,20 +67,14 @@ module.exports = {
             .then(contracts => res.status(200).send(contracts))
             .catch(error => res.status(400).send(error));
     },
-    listFull(req, res){
-        return Contracts
-            .findAll({
-                include:[{
-                    model: Players, as: 'player'
-                },{
-                    model: Teams, as: 'team',
-                    include:[{
-                        model: Countries, as: 'country',
-                    }]
-                }]
+
+    create(req, res){
+        return Players
+            .create({
+                name: req.body.name,
             })
-            .then(contracts => res.status(200).send(contracts))
-            .catch(error => res.status(400).send(error));
+            .then((player) => res.status(201).send(player))
+            .catch((error) => res.status(400).send(error));
     },
     update(req, res) {
         return Players
