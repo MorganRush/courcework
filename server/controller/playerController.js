@@ -55,6 +55,21 @@ module.exports = {
             .then(contracts => res.status(200).send(contracts))
             .catch(error => res.status(400).send(error));
     },
+    listFull(req, res){
+        return Contracts
+            .findAll({
+                include:[{
+                    model: Players, as: 'player'
+                },{
+                    model: Teams, as: 'team',
+                    include:[{
+                        model: Countries, as: 'country',
+                    }]
+                }]
+            })
+            .then(contracts => res.status(200).send(contracts))
+            .catch(error => res.status(400).send(error));
+    },
     update(req, res) {
         return Players
             .findById(req.params.id)

@@ -61,12 +61,42 @@ module.exports = {
         }
     },
 
-    addToDB(){
-        for (let i = 0; i < data.length; i++){
-            Players
-                .create({
-                    name: data[i].name
-                })
-        }
+    addToDB(req, res){
+        let i = 1;
+        Countries
+            .create({
+                refNations: data[i].refNations
+            })
+            .then(country => {
+                Teams
+                    .create({
+                        name: data[i].team,
+                        refClubs: data[i].refClubs,
+                        countryId: country.id
+                    })
+                    .then((team) => {
+                        Players
+                            .create({
+                                name: data[i].name,
+                                reiting: data[i].reiting,
+                                pac: data[i].pac,
+                                sho: data[i].sho,
+                                pas: data[i].pas,
+                                dri: data[i].dri,
+                                def: data[i].def,
+                                phy: data[i].phy,
+                                refImage: data[i].refImage
+                            })
+                            .then((player) => {
+                                Contracts
+                                    .create({
+                                        playerID: player.id,
+                                        teamID: team.id
+                                    })
+                                    .then(contract => res.status(201).send(contract))
+                            })
+                    })
+            })
+            .catch((error) => res.status(400).send(error));
     }
 };

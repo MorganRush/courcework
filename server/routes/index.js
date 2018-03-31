@@ -1,5 +1,6 @@
 const playerController = require('../controller').playerController;
 const authorizationController = require('../controller').authorizationController;
+const load = require('../load').load;
 
 module.exports = (app, passport) => {
 
@@ -45,4 +46,7 @@ module.exports = (app, passport) => {
     app.get('/api/teams/:team/players', playerController.listByTeam);
     app.get('/api/players/:limit', playerController.listLimit);
     app.get('/api/countries/:country/players', playerController.listByCountry);
+    app.get('/api/full', playerController.listFull);
+
+    app.get('/api/test', load.addToDB);
 };
