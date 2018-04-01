@@ -2,6 +2,7 @@ const playerController = require('../controller').playerController;
 const authorizationController = require('../controller').authorizationController;
 const teamController = require('../controller').teamController;
 const countriesController = require('../controller').countriesController;
+const contractsController = require('../controller').contractsController;
 const load = require('../load').load;
 
 module.exports = (app, passport) => {
@@ -43,14 +44,19 @@ module.exports = (app, passport) => {
         message: 'hw',
     }));
 
-    app.get('/main/players/team/:team', playerController.listByTeam);
-    app.get('/main/players/:limit', playerController.listLimit);
-    app.get('/main/players/country/:country', playerController.listByCountry);
-    app.get('/main/players', playerController.list);
+    app.get('/main/contracts/team/:team', contractsController.listByTeam);
+    app.get('/main/contracts/:limit', contractsController.listLimit);
+    app.get('/main/contracts/country/:country', contractsController.listByCountry);
+    app.get('/main/contracts', contractsController.list);
 
     app.get('/main/teams', teamController.list);
     app.get('/main/teams/:limit', teamController.listLimit);
     app.get('/main/teams/country/:country', teamController.listByCountry);
+
+    app.get('/main/players', playerController.list);
+
+    app.get('/main/countries', countriesController.list);
+    app.get('/main/countries/:limit', countriesController.listLimit);
 
     app.get('/main/test', load.addToDB);
 };
