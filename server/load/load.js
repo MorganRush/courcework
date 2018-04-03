@@ -16,6 +16,7 @@ module.exports = {
 
     loadFromFuthead(){
         const players = [];
+        let count = 0;
 
         for (let j = 1; j <= 100; j++){
             request((urlStart + j + urlEnd), function (error, response, body) {
@@ -44,8 +45,9 @@ module.exports = {
                         player.refClubs = playerClubs[0].attribs.src;
                         player.refNations = playerNations[0].attribs.src;
                         players.push(player);
+                        count++
                     }
-                    if (j === 100){
+                    if (count === 4400){
                         //console.log(players);
                         fs.writeFile('players.json', JSON.stringify(players), (err) => {
                             if (err){
@@ -62,48 +64,42 @@ module.exports = {
     },
 
     addToDB(req, res){
-        // for (let i = 0; i < data.length; i++ ){
-        //     if (data[i].name === "Alex Sandro"){
-        //         console.log(i);
-        //         return;
-        //     }
-        // }
-        //console.log(data.length);
-        let i = 180;
-        Countries
-            .create({
-                refNations: data[i].refNations
-            })
-            .then(country => {
-                Teams
-                    .create({
-                        name: data[i].team,
-                        refClubs: data[i].refClubs,
-                        countryId: country.id
-                    })
-                    .then((team) => {
-                        Players
-                            .create({
-                                name: data[i].name,
-                                reiting: data[i].reiting,
-                                pac: data[i].pac,
-                                sho: data[i].sho,
-                                pas: data[i].pas,
-                                dri: data[i].dri,
-                                def: data[i].def,
-                                phy: data[i].phy,
-                                refImage: data[i].refImage
-                            })
-                            .then((player) => {
-                                Contracts
-                                    .create({
-                                        playerID: player.id,
-                                        teamID: team.id
-                                    })
-                                    .then(contract => res.status(201).send(contract))
-                            })
-                    })
-            })
-            .catch((error) => res.status(400).send(error));
+        for(let i = 0; i < data.length; i++){
+            Countries
+                .create({
+                    refNations: data[i].refNations
+                })
+                .then(country => {
+                    Teams
+                        .create({
+                            name: data[i].team,
+                            refClubs: data[i].refClubs,
+                            countryId: country.id
+                        })
+                        .then((team) => {
+                            Players
+                                .create({
+                                    name: data[i].name,
+                                    reiting: data[i].reiting,
+                                    pac: data[i].pac,
+                                    sho: data[i].sho,
+                                    pas: data[i].pas,
+                                    dri: data[i].dri,
+                                    def: data[i].def,
+                                    phy: data[i].phy,
+                                    refImage: data[i].refImage
+                                })
+                                .then((player) => {
+                                    Contracts
+                                        .create({
+                                            playerID: player.id,
+                                            teamID: team.id
+                                        })
+                                        .then(console.log("successes"));
+                                })
+                        })
+                })
+                .catch((error) => console.log(error.message));
+        }
     }
 };

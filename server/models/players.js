@@ -43,6 +43,14 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey: 'playerID',
           as: 'contracts',
       });
+      players.hasMany(models.favoritesPlayer, {
+          foreignKey: 'playerID',
+          as: 'favoritesPlayer',
+      });
+      players.hasMany(models.commentsPlayers, {
+          foreignKey: 'playerID',
+          as: 'commentsPlayers',
+      });
       // players.hasMany(models.playerStatistics, {
       //     foreignKey: 'playerID',
       //     as: 'playerStatistics',

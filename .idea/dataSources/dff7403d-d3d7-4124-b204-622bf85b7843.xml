@@ -25,8 +25,8 @@
     </role>
     <schema id="5" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-03-31.14:44:01.853</IntrospectionTimestamp>
-      <IntrospectionStateNumber>959</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-04-03.21:08:46.991</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1076</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -45,403 +45,749 @@
     <schema id="10" parent="2" name="information_schema">
       <ObjectId>12113</ObjectId>
     </schema>
-    <sequence id="11" parent="5" name="contracts_id_seq">
-      <ObjectId>17599</ObjectId>
-      <StateNumber>957</StateNumber>
+    <sequence id="11" parent="5" name="commentsPlayers_id_seq">
+      <ObjectId>18006</ObjectId>
+      <StateNumber>1076</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="12" parent="5" name="countries_id_seq">
-      <ObjectId>17570</ObjectId>
-      <StateNumber>951</StateNumber>
+    <sequence id="12" parent="5" name="commentsTeams_id_seq">
+      <ObjectId>17988</ObjectId>
+      <StateNumber>1074</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="13" parent="5" name="players_id_seq">
-      <ObjectId>17578</ObjectId>
-      <StateNumber>953</StateNumber>
+    <sequence id="13" parent="5" name="contracts_id_seq">
+      <ObjectId>17926</ObjectId>
+      <StateNumber>1066</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="14" parent="5" name="teams_id_seq">
-      <ObjectId>17586</ObjectId>
-      <StateNumber>955</StateNumber>
+    <sequence id="14" parent="5" name="countries_id_seq">
+      <ObjectId>17897</ObjectId>
+      <StateNumber>1060</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="15" parent="5" name="users_id_seq">
-      <ObjectId>17617</ObjectId>
-      <StateNumber>959</StateNumber>
+    <sequence id="15" parent="5" name="favoritesPlayers_id_seq">
+      <ObjectId>17952</ObjectId>
+      <StateNumber>1070</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
     </sequence>
-    <table id="16" parent="5" name="SequelizeMeta">
-      <ObjectId>17565</ObjectId>
-      <StateNumber>950</StateNumber>
+    <sequence id="16" parent="5" name="favoritesTeams_id_seq">
+      <ObjectId>17970</ObjectId>
+      <StateNumber>1072</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="17" parent="5" name="players_id_seq">
+      <ObjectId>17905</ObjectId>
+      <StateNumber>1062</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="18" parent="5" name="teams_id_seq">
+      <ObjectId>17913</ObjectId>
+      <StateNumber>1064</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="19" parent="5" name="users_id_seq">
+      <ObjectId>17944</ObjectId>
+      <StateNumber>1068</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="20" parent="5" name="SequelizeMeta">
+      <ObjectId>17892</ObjectId>
+      <StateNumber>1059</StateNumber>
     </table>
-    <table id="17" parent="5" name="contracts">
-      <ObjectId>17601</ObjectId>
-      <StateNumber>957</StateNumber>
+    <table id="21" parent="5" name="commentsPlayers">
+      <ObjectId>18008</ObjectId>
+      <StateNumber>1076</StateNumber>
     </table>
-    <table id="18" parent="5" name="countries">
-      <ObjectId>17572</ObjectId>
-      <StateNumber>955</StateNumber>
+    <table id="22" parent="5" name="commentsTeams">
+      <ObjectId>17990</ObjectId>
+      <StateNumber>1074</StateNumber>
     </table>
-    <table id="19" parent="5" name="players">
-      <ObjectId>17580</ObjectId>
-      <StateNumber>957</StateNumber>
+    <table id="23" parent="5" name="contracts">
+      <ObjectId>17928</ObjectId>
+      <StateNumber>1066</StateNumber>
     </table>
-    <table id="20" parent="5" name="teams">
-      <ObjectId>17588</ObjectId>
-      <StateNumber>957</StateNumber>
+    <table id="24" parent="5" name="countries">
+      <ObjectId>17899</ObjectId>
+      <StateNumber>1064</StateNumber>
     </table>
-    <table id="21" parent="5" name="users">
-      <ObjectId>17619</ObjectId>
-      <StateNumber>959</StateNumber>
+    <table id="25" parent="5" name="favoritesPlayers">
+      <ObjectId>17954</ObjectId>
+      <StateNumber>1070</StateNumber>
     </table>
-    <column id="22" parent="16" name="name">
+    <table id="26" parent="5" name="favoritesTeams">
+      <ObjectId>17972</ObjectId>
+      <StateNumber>1072</StateNumber>
+    </table>
+    <table id="27" parent="5" name="players">
+      <ObjectId>17907</ObjectId>
+      <StateNumber>1076</StateNumber>
+    </table>
+    <table id="28" parent="5" name="teams">
+      <ObjectId>17915</ObjectId>
+      <StateNumber>1074</StateNumber>
+    </table>
+    <table id="29" parent="5" name="users">
+      <ObjectId>17946</ObjectId>
+      <StateNumber>1076</StateNumber>
+    </table>
+    <column id="30" parent="20" name="name">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>950</StateNumber>
+      <StateNumber>1059</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="23" parent="16" name="SequelizeMeta_pkey">
-      <ObjectId>17568</ObjectId>
+    <index id="31" parent="20" name="SequelizeMeta_pkey">
+      <ObjectId>17895</ObjectId>
       <ColNames>name</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="24" parent="16" name="SequelizeMeta_pkey">
-      <ObjectId>17569</ObjectId>
+    <key id="32" parent="20" name="SequelizeMeta_pkey">
+      <ObjectId>17896</ObjectId>
       <ColNames>name</ColNames>
       <UnderlyingIndexName>SequelizeMeta_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="25" parent="17" name="id">
+    <column id="33" parent="21" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>957</StateNumber>
-      <DefaultExpression>nextval(&apos;contracts_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>1076</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;commentsPlayers_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
-      <SequenceName>contracts_id_seq</SequenceName>
+      <SequenceName>commentsPlayers_id_seq</SequenceName>
     </column>
-    <column id="26" parent="17" name="description">
+    <column id="34" parent="21" name="comment">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>957</StateNumber>
+      <NotNull>1</NotNull>
+      <StateNumber>1076</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="27" parent="17" name="playerID">
+    <column id="35" parent="21" name="countLike">
       <Position>3</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>957</StateNumber>
+      <StateNumber>1076</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="28" parent="17" name="teamID">
+    <column id="36" parent="21" name="countDisLike">
       <Position>4</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>957</StateNumber>
+      <StateNumber>1076</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="29" parent="17" name="createdAt">
+    <column id="37" parent="21" name="playerID">
       <Position>5</Position>
-      <DataType>timestamp with time zone|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>957</StateNumber>
-      <TypeId>1184</TypeId>
+      <DataType>integer|0</DataType>
+      <StateNumber>1076</StateNumber>
+      <TypeId>23</TypeId>
     </column>
-    <column id="30" parent="17" name="updatedAt">
+    <column id="38" parent="21" name="userID">
       <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1076</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="39" parent="21" name="createdAt">
+      <Position>7</Position>
       <DataType>timestamp with time zone|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>957</StateNumber>
+      <StateNumber>1076</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <index id="31" parent="17" name="contracts_pkey">
-      <ObjectId>17605</ObjectId>
+    <column id="40" parent="21" name="updatedAt">
+      <Position>8</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1076</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="41" parent="21" name="commentsPlayers_pkey">
+      <ObjectId>18012</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="32" parent="17" name="contracts_pkey">
-      <ObjectId>17606</ObjectId>
+    <key id="42" parent="21" name="commentsPlayers_pkey">
+      <ObjectId>18013</ObjectId>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>contracts_pkey</UnderlyingIndexName>
+      <UnderlyingIndexName>commentsPlayers_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="33" parent="17" name="contracts_playerID_fkey">
-      <ObjectId>17607</ObjectId>
+    <foreign-key id="43" parent="21" name="commentsPlayers_playerID_fkey">
+      <ObjectId>18014</ObjectId>
       <ColNames>playerID</ColNames>
-      <RefTableId>17580</RefTableId>
+      <RefTableId>17907</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>players</RefTableName>
       <RefKeyName>players_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="34" parent="17" name="contracts_teamID_fkey">
-      <ObjectId>17612</ObjectId>
+    <foreign-key id="44" parent="21" name="commentsPlayers_userID_fkey">
+      <ObjectId>18019</ObjectId>
+      <ColNames>userID</ColNames>
+      <RefTableId>17946</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="45" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1074</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;commentsTeams_id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>commentsTeams_id_seq</SequenceName>
+    </column>
+    <column id="46" parent="22" name="comment">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1074</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="22" name="countLike">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1074</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="48" parent="22" name="countDisLike">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1074</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="49" parent="22" name="teamID">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1074</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="50" parent="22" name="userID">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1074</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="51" parent="22" name="createdAt">
+      <Position>7</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1074</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="52" parent="22" name="updatedAt">
+      <Position>8</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1074</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="53" parent="22" name="commentsTeams_pkey">
+      <ObjectId>17994</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="22" name="commentsTeams_pkey">
+      <ObjectId>17995</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>commentsTeams_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="22" name="commentsTeams_teamID_fkey">
+      <ObjectId>17996</ObjectId>
       <ColNames>teamID</ColNames>
-      <RefTableId>17588</RefTableId>
+      <RefTableId>17915</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>teams</RefTableName>
       <RefKeyName>teams_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="35" parent="18" name="id">
+    <foreign-key id="56" parent="22" name="commentsTeams_userID_fkey">
+      <ObjectId>18001</ObjectId>
+      <ColNames>userID</ColNames>
+      <RefTableId>17946</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="57" parent="23" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>951</StateNumber>
+      <StateNumber>1066</StateNumber>
+      <DefaultExpression>nextval(&apos;contracts_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>contracts_id_seq</SequenceName>
+    </column>
+    <column id="58" parent="23" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1066</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="59" parent="23" name="playerID">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1066</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="60" parent="23" name="teamID">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1066</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="61" parent="23" name="createdAt">
+      <Position>5</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1066</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="62" parent="23" name="updatedAt">
+      <Position>6</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1066</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="63" parent="23" name="contracts_pkey">
+      <ObjectId>17932</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="64" parent="23" name="contracts_pkey">
+      <ObjectId>17933</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>contracts_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="23" name="contracts_playerID_fkey">
+      <ObjectId>17934</ObjectId>
+      <ColNames>playerID</ColNames>
+      <RefTableId>17907</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>players</RefTableName>
+      <RefKeyName>players_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="66" parent="23" name="contracts_teamID_fkey">
+      <ObjectId>17939</ObjectId>
+      <ColNames>teamID</ColNames>
+      <RefTableId>17915</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="67" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1060</StateNumber>
       <DefaultExpression>nextval(&apos;countries_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>countries_id_seq</SequenceName>
     </column>
-    <column id="36" parent="18" name="name">
+    <column id="68" parent="24" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>951</StateNumber>
+      <StateNumber>1060</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="18" name="refNations">
+    <column id="69" parent="24" name="refNations">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>951</StateNumber>
+      <StateNumber>1060</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="38" parent="18" name="createdAt">
+    <column id="70" parent="24" name="createdAt">
       <Position>4</Position>
       <DataType>timestamp with time zone|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>951</StateNumber>
+      <StateNumber>1060</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="39" parent="18" name="updatedAt">
+    <column id="71" parent="24" name="updatedAt">
       <Position>5</Position>
       <DataType>timestamp with time zone|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>951</StateNumber>
+      <StateNumber>1060</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <index id="40" parent="18" name="countries_pkey">
-      <ObjectId>17576</ObjectId>
+    <index id="72" parent="24" name="countries_pkey">
+      <ObjectId>17903</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="18" name="countries_pkey">
-      <ObjectId>17577</ObjectId>
+    <key id="73" parent="24" name="countries_pkey">
+      <ObjectId>17904</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>countries_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="42" parent="19" name="id">
+    <column id="74" parent="25" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1070</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;favoritesPlayers_id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>favoritesPlayers_id_seq</SequenceName>
+    </column>
+    <column id="75" parent="25" name="playerID">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1070</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="76" parent="25" name="userID">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1070</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="77" parent="25" name="createdAt">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1070</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="78" parent="25" name="updatedAt">
+      <Position>5</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1070</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="79" parent="25" name="favoritesPlayers_pkey">
+      <ObjectId>17958</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="80" parent="25" name="favoritesPlayers_pkey">
+      <ObjectId>17959</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>favoritesPlayers_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="81" parent="25" name="favoritesPlayers_playerID_fkey">
+      <ObjectId>17960</ObjectId>
+      <ColNames>playerID</ColNames>
+      <RefTableId>17907</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>players</RefTableName>
+      <RefKeyName>players_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="82" parent="25" name="favoritesPlayers_userID_fkey">
+      <ObjectId>17965</ObjectId>
+      <ColNames>userID</ColNames>
+      <RefTableId>17946</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="83" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1072</StateNumber>
+      <DefaultExpression>nextval(&apos;&quot;favoritesTeams_id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>favoritesTeams_id_seq</SequenceName>
+    </column>
+    <column id="84" parent="26" name="teamID">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1072</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="85" parent="26" name="userID">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1072</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="86" parent="26" name="createdAt">
+      <Position>4</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1072</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="87" parent="26" name="updatedAt">
+      <Position>5</Position>
+      <DataType>timestamp with time zone|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1072</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <index id="88" parent="26" name="favoritesTeams_pkey">
+      <ObjectId>17976</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="26" name="favoritesTeams_pkey">
+      <ObjectId>17977</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>favoritesTeams_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="26" name="favoritesTeams_teamID_fkey">
+      <ObjectId>17978</ObjectId>
+      <ColNames>teamID</ColNames>
+      <RefTableId>17915</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>teams</RefTableName>
+      <RefKeyName>teams_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="91" parent="26" name="favoritesTeams_userID_fkey">
+      <ObjectId>17983</ObjectId>
+      <ColNames>userID</ColNames>
+      <RefTableId>17946</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="92" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1062</StateNumber>
       <DefaultExpression>nextval(&apos;players_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>players_id_seq</SequenceName>
     </column>
-    <column id="43" parent="19" name="name">
+    <column id="93" parent="27" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="19" name="reiting">
+    <column id="94" parent="27" name="reiting">
       <Position>3</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="45" parent="19" name="pac">
+    <column id="95" parent="27" name="pac">
       <Position>4</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="46" parent="19" name="sho">
+    <column id="96" parent="27" name="sho">
       <Position>5</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="47" parent="19" name="pas">
+    <column id="97" parent="27" name="pas">
       <Position>6</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="48" parent="19" name="dri">
+    <column id="98" parent="27" name="dri">
       <Position>7</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="49" parent="19" name="def">
+    <column id="99" parent="27" name="def">
       <Position>8</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="50" parent="19" name="phy">
+    <column id="100" parent="27" name="phy">
       <Position>9</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="19" name="refImage">
+    <column id="101" parent="27" name="refImage">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="52" parent="19" name="createdAt">
+    <column id="102" parent="27" name="createdAt">
       <Position>11</Position>
       <DataType>timestamp with time zone|0</DataType>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="53" parent="19" name="updatedAt">
+    <column id="103" parent="27" name="updatedAt">
       <Position>12</Position>
       <DataType>timestamp with time zone|0</DataType>
-      <StateNumber>953</StateNumber>
+      <StateNumber>1062</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <index id="54" parent="19" name="players_pkey">
-      <ObjectId>17584</ObjectId>
+    <index id="104" parent="27" name="players_pkey">
+      <ObjectId>17911</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="55" parent="19" name="players_pkey">
-      <ObjectId>17585</ObjectId>
+    <key id="105" parent="27" name="players_pkey">
+      <ObjectId>17912</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>players_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="56" parent="20" name="id">
+    <column id="106" parent="28" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>955</StateNumber>
+      <StateNumber>1064</StateNumber>
       <DefaultExpression>nextval(&apos;teams_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>teams_id_seq</SequenceName>
     </column>
-    <column id="57" parent="20" name="name">
+    <column id="107" parent="28" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>955</StateNumber>
+      <StateNumber>1064</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="20" name="refClubs">
+    <column id="108" parent="28" name="refClubs">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>955</StateNumber>
+      <StateNumber>1064</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="20" name="countryId">
+    <column id="109" parent="28" name="countryId">
       <Position>4</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>955</StateNumber>
+      <StateNumber>1064</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="60" parent="20" name="createdAt">
+    <column id="110" parent="28" name="createdAt">
       <Position>5</Position>
       <DataType>timestamp with time zone|0</DataType>
-      <StateNumber>955</StateNumber>
+      <StateNumber>1064</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="61" parent="20" name="updatedAt">
+    <column id="111" parent="28" name="updatedAt">
       <Position>6</Position>
       <DataType>timestamp with time zone|0</DataType>
-      <StateNumber>955</StateNumber>
+      <StateNumber>1064</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <index id="62" parent="20" name="teams_pkey">
-      <ObjectId>17592</ObjectId>
+    <index id="112" parent="28" name="teams_pkey">
+      <ObjectId>17919</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="63" parent="20" name="teams_pkey">
-      <ObjectId>17593</ObjectId>
+    <key id="113" parent="28" name="teams_pkey">
+      <ObjectId>17920</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>teams_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="64" parent="20" name="teams_countryId_fkey">
-      <ObjectId>17594</ObjectId>
+    <foreign-key id="114" parent="28" name="teams_countryId_fkey">
+      <ObjectId>17921</ObjectId>
       <ColNames>countryId</ColNames>
-      <RefTableId>17572</RefTableId>
+      <RefTableId>17899</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>countries</RefTableName>
       <RefKeyName>countries_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="65" parent="21" name="id">
+    <column id="115" parent="29" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>959</StateNumber>
+      <StateNumber>1068</StateNumber>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
       <SequenceName>users_id_seq</SequenceName>
     </column>
-    <column id="66" parent="21" name="login">
+    <column id="116" parent="29" name="login">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>959</StateNumber>
+      <StateNumber>1068</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="67" parent="21" name="password">
+    <column id="117" parent="29" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>959</StateNumber>
+      <StateNumber>1068</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="68" parent="21" name="createdAt">
+    <column id="118" parent="29" name="createdAt">
       <Position>4</Position>
       <DataType>timestamp with time zone|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>959</StateNumber>
+      <StateNumber>1068</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="69" parent="21" name="updatedAt">
+    <column id="119" parent="29" name="updatedAt">
       <Position>5</Position>
       <DataType>timestamp with time zone|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>959</StateNumber>
+      <StateNumber>1068</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <index id="70" parent="21" name="users_pkey">
-      <ObjectId>17623</ObjectId>
+    <index id="120" parent="29" name="users_pkey">
+      <ObjectId>17950</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="71" parent="21" name="users_pkey">
-      <ObjectId>17624</ObjectId>
+    <key id="121" parent="29" name="users_pkey">
+      <ObjectId>17951</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
