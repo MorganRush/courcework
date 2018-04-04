@@ -23,8 +23,27 @@ module.exports = {
         return Contracts
             .findAll({
                 limit: req.params.limit,
+                offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player'
+                },{
+                    model: Teams, as: 'team',
+                    include:[{
+                        model: Countries, as: 'country',
+                    }]
+                }]
+            })
+            .then(contracts => res.status(200).send(contracts))
+            .catch(error => res.status(400).send(error));
+    },
+    listLike(req, res){
+        console.log("lol");
+        return Contracts
+            .findAll({
+                limit: req.params.limit,
+                include:[{
+                    model: Players, as: 'player',
+                    where: { name: { $like: '%' + req.params.like + '%' } }
                 },{
                     model: Teams, as: 'team',
                     include:[{

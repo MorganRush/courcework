@@ -45,7 +45,8 @@ module.exports = (app, passport) => {
     }));
 
     app.get('/main/contracts/team/:team', contractsController.listByTeam);
-    app.get('/main/contracts/:limit', contractsController.listLimit);
+    app.get('/main/contracts/:limit/:offset', contractsController.listLimit);
+    app.get('/main/contracts/like/:limit/:like', contractsController.listLike);
     app.get('/main/contracts/country/:country', contractsController.listByCountry);
     app.get('/main/contracts', contractsController.list);
 
