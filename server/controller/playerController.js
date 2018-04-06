@@ -7,7 +7,13 @@ module.exports = {
     list(req, res){
         return Players
             .all()
-            .then(contracts => res.status(200).send(contracts))
+            .then((player) => res.status(200).send(player))
+            .catch(error => res.status(400).send(error));
+    },
+    one(req, res){
+        return Players
+            .findOne({ where: {name: req.params.name }})
+            .then((player) => res.status(200).send(player))
             .catch(error => res.status(400).send(error));
     },
     create(req, res){

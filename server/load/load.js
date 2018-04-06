@@ -66,40 +66,44 @@ module.exports = {
     addToDB(req, res){
         for(let i = 0; i < data.length; i++){
             Countries
-                .create({
-                    refNations: data[i].refNations
-                })
+                .findOne()
                 .then(country => {
-                    Teams
+                    Countries
                         .create({
-                            name: data[i].team,
-                            refClubs: data[i].refClubs,
-                            countryId: country.id
+                            refNations: data[i].refNations
                         })
-                        .then((team) => {
-                            Players
+                        .then(country => {
+                            Teams
                                 .create({
-                                    name: data[i].name,
-                                    reiting: data[i].reiting,
-                                    pac: data[i].pac,
-                                    sho: data[i].sho,
-                                    pas: data[i].pas,
-                                    dri: data[i].dri,
-                                    def: data[i].def,
-                                    phy: data[i].phy,
-                                    refImage: data[i].refImage
+                                    name: data[i].team,
+                                    refClubs: data[i].refClubs,
+                                    countryId: country.id
                                 })
-                                .then((player) => {
-                                    Contracts
+                                .then((team) => {
+                                    Players
                                         .create({
-                                            playerID: player.id,
-                                            teamID: team.id
+                                            name: data[i].name,
+                                            reiting: data[i].reiting,
+                                            pac: data[i].pac,
+                                            sho: data[i].sho,
+                                            pas: data[i].pas,
+                                            dri: data[i].dri,
+                                            def: data[i].def,
+                                            phy: data[i].phy,
+                                            refImage: data[i].refImage
                                         })
-                                        .then(console.log("successes"));
+                                        .then((player) => {
+                                            Contracts
+                                                .create({
+                                                    playerID: player.id,
+                                                    teamID: team.id
+                                                })
+                                                .then(console.log("successes"));
+                                        })
                                 })
                         })
+                        .catch((error) => console.log(error.message));
                 })
-                .catch((error) => console.log(error.message));
         }
     }
 };

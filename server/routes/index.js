@@ -55,6 +55,7 @@ module.exports = (app, passport) => {
     app.get('/main/teams/country/:country', teamController.listByCountry);
 
     app.get('/main/players', playerController.list);
+    app.get('/main/players/:name', playerController.one);
 
     app.get('/main/countries', countriesController.list);
     app.get('/main/countries/:limit', countriesController.listLimit);
