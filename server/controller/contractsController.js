@@ -31,9 +31,6 @@ module.exports = {
                 offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
-                    include:[{
-                        model: CommentsPlayers, as: 'commentsPlayers',
-                    }]
                 },{
                     model: Teams, as: 'team',
                     include:[{
@@ -52,9 +49,9 @@ module.exports = {
                 limit: req.params.limit,
                 include:[{
                     model: Players, as: 'player',
-                    include:[{
-                        model: CommentsPlayers, as: 'commentsPlayers',
-                    }],
+                    // include:[{
+                    //     model: CommentsPlayers, as: 'commentsPlayers',
+                    // }],
                     where: { name: { $like: '%' + req.params.like + '%' } }
                 },{
                     model: Teams, as: 'team',

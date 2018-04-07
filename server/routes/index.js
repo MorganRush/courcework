@@ -60,5 +60,8 @@ module.exports = (app, passport) => {
     app.get('/main/countries', countriesController.list);
     app.get('/main/countries/:limit', countriesController.listLimit);
 
-    app.get('/main/test', load.addToDB);
+    // app.get('/main/load/countries', load.addCountriesToDB);
+    // app.get('/main/load/teams', load.addTeamsToDB);
+    // app.get('/main/load/players', load.addPlayersToDB);
+    // app.get('/main/load/contracts', load.addContractsAndPlayerStatistiscToDB);
 };

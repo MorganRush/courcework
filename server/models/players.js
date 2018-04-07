@@ -5,38 +5,6 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.STRING,
           allowNull: false,
       },
-      reiting: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
-      pac: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
-      sho: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
-      pas: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
-      dri: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
-      def: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
-      phy: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
-      refImage: {
-          type: DataTypes.STRING,
-          allowNull: false,
-      }
   });
   players.associate = (models) => {
       players.hasMany(models.contracts, {

@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const contracts = sequelize.define('contracts', {
+  const playersStatistics = sequelize.define('playersStatistics', {
       reiting: {
           type: DataTypes.INTEGER,
           allowNull: false,
@@ -34,19 +34,11 @@ module.exports = (sequelize, DataTypes) => {
           allowNull: false,
       }
   });
-  contracts.associate = (models) => {
-      contracts.belongsTo(models.players, {
-          foreignKey: 'playerID',
-          onDelete: 'CASCADE',
+  playersStatistics.associate = (models) => {
+      playersStatistics.hasOne(models.contracts, {
+          foreignKey: 'playersStatisticsID',
+          as: 'contracts'
       });
-      contracts.belongsTo(models.teams, {
-          foreignKey: 'teamID',
-          onDelete: 'CASCADE',
-      });
-      // contracts.belongsTo(models.playersStatistics, {
-      //     foreignKey: 'playersStatisticsID',
-      //     onDelete: 'CASCADE',
-      // });
   };
-  return contracts;
+  return playersStatistics;
 };

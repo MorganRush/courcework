@@ -21,7 +21,7 @@ app.use(flash());
 //     load.addToDB();
 // }
 
-//load.addToDB();
+// load.addToDB();
 
 app.use(session({secret: 'lol', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
