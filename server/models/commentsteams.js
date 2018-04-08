@@ -1,20 +1,20 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const commentsTeams = sequelize.define('commentsTeams', {
-      comment: {
-          type: DataTypes.STRING,
-          allowNull: false,
-      },
-      countLike: {
-          type: DataTypes.INTEGER,
-          allowNull: true,
-      },
-      countDisLike: {
-          type: DataTypes.INTEGER,
-          allowNull: true,
-      }
-  });
-  commentsTeams.associate = (models) => {
+    const commentsTeams = sequelize.define('commentsTeams', {
+        comment: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        countLike: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        countDisLike: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        }
+    });
+    commentsTeams.associate = (models) => {
         commentsTeams.belongsTo(models.teams, {
             foreignKey: 'teamID',
             onDelete: 'CASCADE',
@@ -23,6 +23,6 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'userID',
             onDelete: 'CASCADE',
         });
-  };
-  return commentsTeams;
+    };
+    return commentsTeams;
 };

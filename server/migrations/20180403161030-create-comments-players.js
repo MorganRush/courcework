@@ -1,54 +1,54 @@
 'use strict';
 module.exports = {
-  up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('commentsPlayers', {
-        id: {
-            allowNull: false,
-            autoIncrement: true,
-            primaryKey: true,
-            type: Sequelize.INTEGER
-        },
-        comment: {
-            type: Sequelize.STRING,
-            allowNull: false,
-        },
-        countLike: {
-            type: Sequelize.INTEGER,
-            allowNull: true,
-        },
-        countDisLike: {
-            type: Sequelize.INTEGER,
-            allowNull: true,
-        },
-        playerID: {
-            references: {
-                model: 'players',
-                key: 'id',
-                as: 'players'
+    up: (queryInterface, Sequelize) => {
+        return queryInterface.createTable('commentsPlayers', {
+            id: {
+                allowNull: false,
+                autoIncrement: true,
+                primaryKey: true,
+                type: Sequelize.INTEGER
             },
-            onDelete: 'CASCADE',
-            type: Sequelize.INTEGER,
-        },
-        userID: {
-            references: {
-                model: 'users',
-                key: 'id',
-                as: 'users'
+            comment: {
+                type: Sequelize.STRING,
+                allowNull: false,
             },
-            onDelete: 'CASCADE',
-            type: Sequelize.INTEGER,
-        },
-        createdAt: {
-            allowNull: false,
-            type: Sequelize.DATE
-        },
-        updatedAt: {
-            allowNull: false,
-            type: Sequelize.DATE
-        }
-    });
-  },
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('commentsPlayers');
-  }
+            countLike: {
+                type: Sequelize.INTEGER,
+                allowNull: true,
+            },
+            countDisLike: {
+                type: Sequelize.INTEGER,
+                allowNull: true,
+            },
+            playerID: {
+                references: {
+                    model: 'players',
+                    key: 'id',
+                    as: 'players'
+                },
+                onDelete: 'CASCADE',
+                type: Sequelize.INTEGER,
+            },
+            userID: {
+                references: {
+                    model: 'users',
+                    key: 'id',
+                    as: 'users'
+                },
+                onDelete: 'CASCADE',
+                type: Sequelize.INTEGER,
+            },
+            createdAt: {
+                allowNull: false,
+                type: Sequelize.DATE
+            },
+            updatedAt: {
+                allowNull: false,
+                type: Sequelize.DATE
+            }
+        });
+    },
+    down: (queryInterface, Sequelize) => {
+        return queryInterface.dropTable('commentsPlayers');
+    }
 };

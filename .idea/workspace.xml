@@ -3,17 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="0a724ebe-f2c7-4c70-b717-98e155f1ad0a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/dff7403d-d3d7-4124-b204-622bf85b7843.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/dff7403d-d3d7-4124-b204-622bf85b7843.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dff7403d-d3d7-4124-b204-622bf85b7843/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/dff7403d-d3d7-4124-b204-622bf85b7843/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/server/app.js" afterPath="$PROJECT_DIR$/server/app.js" />
-      <change beforePath="$PROJECT_DIR$/server/controller/contractsController.js" afterPath="$PROJECT_DIR$/server/controller/contractsController.js" />
       <change beforePath="$PROJECT_DIR$/server/load/load.js" afterPath="$PROJECT_DIR$/server/load/load.js" />
       <change beforePath="$PROJECT_DIR$/server/load/players.json" afterPath="$PROJECT_DIR$/server/load/players.json" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20180308113205-create-countries.js" afterPath="$PROJECT_DIR$/server/migrations/20180308113205-create-countries.js" />
       <change beforePath="$PROJECT_DIR$/server/migrations/20180308113207-create-players.js" afterPath="$PROJECT_DIR$/server/migrations/20180308113207-create-players.js" />
-      <change beforePath="$PROJECT_DIR$/server/migrations/20180308114602-create-contracts.js" afterPath="$PROJECT_DIR$/server/migrations/20180308114602-create-contracts.js" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20180308114400-create-teams.js" afterPath="$PROJECT_DIR$/server/migrations/20180308114400-create-teams.js" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20180315104701-create-users.js" afterPath="$PROJECT_DIR$/server/migrations/20180315104701-create-users.js" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20180403154322-create-favorites-player.js" afterPath="$PROJECT_DIR$/server/migrations/20180403154322-create-favorites-player.js" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20180403154354-create-favorites-team.js" afterPath="$PROJECT_DIR$/server/migrations/20180403154354-create-favorites-team.js" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20180403161018-create-comments-teams.js" afterPath="$PROJECT_DIR$/server/migrations/20180403161018-create-comments-teams.js" />
+      <change beforePath="$PROJECT_DIR$/server/migrations/20180403161030-create-comments-players.js" afterPath="$PROJECT_DIR$/server/migrations/20180403161030-create-comments-players.js" />
+      <change beforePath="$PROJECT_DIR$/server/models/commentsplayers.js" afterPath="$PROJECT_DIR$/server/models/commentsplayers.js" />
+      <change beforePath="$PROJECT_DIR$/server/models/commentsteams.js" afterPath="$PROJECT_DIR$/server/models/commentsteams.js" />
       <change beforePath="$PROJECT_DIR$/server/models/contracts.js" afterPath="$PROJECT_DIR$/server/models/contracts.js" />
-      <change beforePath="$PROJECT_DIR$/server/models/next/playerstatistics.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/server/models/countries.js" afterPath="$PROJECT_DIR$/server/models/countries.js" />
+      <change beforePath="$PROJECT_DIR$/server/models/favoritesplayer.js" afterPath="$PROJECT_DIR$/server/models/favoritesplayer.js" />
+      <change beforePath="$PROJECT_DIR$/server/models/favoritesteam.js" afterPath="$PROJECT_DIR$/server/models/favoritesteam.js" />
       <change beforePath="$PROJECT_DIR$/server/models/players.js" afterPath="$PROJECT_DIR$/server/models/players.js" />
-      <change beforePath="$PROJECT_DIR$/server/routes/index.js" afterPath="$PROJECT_DIR$/server/routes/index.js" />
+      <change beforePath="$PROJECT_DIR$/server/models/teams.js" afterPath="$PROJECT_DIR$/server/models/teams.js" />
+      <change beforePath="$PROJECT_DIR$/server/models/users.js" afterPath="$PROJECT_DIR$/server/models/users.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,110 +77,111 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="countries" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.countries">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/load/index.js">
+      <file leaf-file-name="20180308114602-create-contracts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/migrations/20180308114602-create-contracts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="714">
+              <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="players" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.players">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contractsController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/controller/contractsController.js">
+      <file leaf-file-name="20180308114400-create-teams.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/migrations/20180308114400-create-teams.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="41" column="57" lean-forward="false" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
-              <folding>
-                <element signature="e#288#878#0" expanded="false" />
-                <element signature="e#1499#2244#0" expanded="false" />
-                <element signature="e#2271#2916#0" expanded="false" />
-                <element signature="e#2946#3596#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="players.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/load/players.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="0" column="1043" lean-forward="false" selection-start-line="0" selection-start-column="1043" selection-end-line="0" selection-end-column="1043" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teams" pinned="false" current-in-tab="true">
-        <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.teams">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="20180308113207-create-players.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/migrations/20180308113207-create-players.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="20180308113205-create-countries.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/migrations/20180308113205-create-countries.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="characteristics.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/models/characteristics.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="143" column="7" lean-forward="false" selection-start-line="143" selection-start-column="7" selection-end-line="143" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20180408123649-create-characteristics.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="149" column="14" lean-forward="false" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="load.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/load/load.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="111" column="33" lean-forward="false" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
+            <state relative-caret-position="119">
+              <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
               <folding>
-                <element signature="e#505#2894#0" expanded="false" />
-                <element signature="e#597#2888#0" expanded="false" />
-                <element signature="e#2911#3328#0" expanded="false" />
-                <element signature="e#3361#3985#0" expanded="false" />
-                <element signature="e#5493#6103#0" expanded="false" />
-                <element signature="e#7948#11928#0" expanded="false" />
+                <element signature="e#556#2961#0" expanded="false" />
+                <element signature="e#649#2955#0" expanded="false" />
+                <element signature="e#2979#3419#0" expanded="false" />
+                <element signature="e#3453#4080#0" expanded="false" />
+                <element signature="e#4110#5562#0" expanded="false" />
+                <element signature="e#5594#6203#0" expanded="false" />
+                <element signature="e#6256#8022#0" expanded="false" />
+                <element signature="e#8047#12029#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contracts" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.contracts">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-121">
+              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,6 +204,7 @@
       <find>Cristiano Ronaldo</find>
       <find>N</find>
       <find>Golo</find>
+      <find>href</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,19 +223,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/migrations/20180322113515-create-cities.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180322113550-create-countries.js" />
-        <option value="$PROJECT_DIR$/server/models/playerstatistics.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180324191507-create-player-statistics.js" />
         <option value="$PROJECT_DIR$/server/models/teamstatistics.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180324192139-create-team-statistics.js" />
         <option value="$PROJECT_DIR$/server/static/signup.html" />
         <option value="$PROJECT_DIR$/server/models/cities.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180308113206-create-cities.js" />
         <option value="$PROJECT_DIR$/server/static/lol.html" />
-        <option value="$PROJECT_DIR$/server/models/countries.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180308113205-create-countries.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180308114400-create-teams.js" />
         <option value="$PROJECT_DIR$/server/load/index.js" />
         <option value="$PROJECT_DIR$/server/controller/teamController.js" />
         <option value="$PROJECT_DIR$/server/controller/countriesController.js" />
@@ -233,17 +238,7 @@
         <option value="$PROJECT_DIR$/server/migrations/20180401133323-create-players-materialized-view.js" />
         <option value="$PROJECT_DIR$/server/models/comentsplayer.js" />
         <option value="$PROJECT_DIR$/server/models/comentsteam.js" />
-        <option value="$PROJECT_DIR$/server/models/users.js" />
-        <option value="$PROJECT_DIR$/server/models/teams.js" />
-        <option value="$PROJECT_DIR$/server/models/favoritesplayer.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180403154322-create-favorites-player.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180403154354-create-favorites-team.js" />
-        <option value="$PROJECT_DIR$/server/models/commentsplayers.js" />
-        <option value="$PROJECT_DIR$/server/models/commentsteams.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180403161018-create-comments-teams.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180403161030-create-comments-players.js" />
         <option value="$PROJECT_DIR$/server/models/index.js" />
-        <option value="$PROJECT_DIR$/server/models/favoritesteam.js" />
         <option value="$PROJECT_DIR$/server/config/index.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/dff7403d-d3d7-4124-b204-622bf85b7843/console.sql" />
         <option value="$PROJECT_DIR$/server/controller/playerController.js" />
@@ -251,17 +246,34 @@
         <option value="$PROJECT_DIR$/server/controller/commentsController.js" />
         <option value="$PROJECT_DIR$/server/controller/index.js" />
         <option value="$PROJECT_DIR$/server/controller/favoritesController.js" />
-        <option value="$PROJECT_DIR$/server/models/players.js" />
-        <option value="$PROJECT_DIR$/server/migrations/20180308113207-create-players.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180406154523-create-players-statistics.js" />
-        <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/server/load/players.json" />
         <option value="$PROJECT_DIR$/server/models/playersstatistics.js" />
-        <option value="$PROJECT_DIR$/server/models/contracts.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180308114602-create-contracts.js" />
-        <option value="$PROJECT_DIR$/server/load/load.js" />
         <option value="$PROJECT_DIR$/server/controller/contractsController.js" />
         <option value="$PROJECT_DIR$/server/routes/index.js" />
+        <option value="$PROJECT_DIR$/server/models/commentsplayers.js" />
+        <option value="$PROJECT_DIR$/server/models/commentsteams.js" />
+        <option value="$PROJECT_DIR$/server/models/contracts.js" />
+        <option value="$PROJECT_DIR$/server/models/countries.js" />
+        <option value="$PROJECT_DIR$/server/models/favoritesplayer.js" />
+        <option value="$PROJECT_DIR$/server/models/favoritesteam.js" />
+        <option value="$PROJECT_DIR$/server/models/players.js" />
+        <option value="$PROJECT_DIR$/server/models/teams.js" />
+        <option value="$PROJECT_DIR$/server/models/users.js" />
+        <option value="$PROJECT_DIR$/server/load/characteristics.json" />
+        <option value="$PROJECT_DIR$/server/models/characteristics.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180403161030-create-comments-players.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180403161018-create-comments-teams.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180403154354-create-favorites-team.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180403154322-create-favorites-player.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180315104701-create-users.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180308114400-create-teams.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180308113207-create-players.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180308113205-create-countries.js" />
+        <option value="$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js" />
+        <option value="$PROJECT_DIR$/server/app.js" />
+        <option value="$PROJECT_DIR$/server/load/load.js" />
       </list>
     </option>
   </component>
@@ -333,16 +345,6 @@
             <path>
               <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
               <item name="courcework" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courcework" type="462c0819:PsiDirectoryNode" />
-              <item name="documentation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courcework" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -355,7 +357,7 @@
               <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
               <item name="courcework" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,15 +516,16 @@
       <workItem from="1522328398933" duration="12120000" />
       <workItem from="1522428103725" duration="22323000" />
       <workItem from="1522586483179" duration="32703000" />
-      <workItem from="1523024799252" duration="31753000" />
+      <workItem from="1523024799252" duration="36735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194181000" />
+    <option name="totallyTimeSpent" value="199163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -536,8 +539,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13725491" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22390318" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114379086" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -550,7 +554,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15849674" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,75 +569,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.favoritesPlayers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.favoritesTeams">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controller/authorizationController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controller/favoritesController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.players">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180308114400-create-teams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180308113205-create-countries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controller/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.playersStatistics">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -702,95 +636,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.playersStatistics">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.playersStatistics">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.playersStatistics">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/countries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/teams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/players.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.playersStatistics">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.playersStatistics">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.playersStatistics">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.playersStatistics">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/commentsteams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,34 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/contracts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="12" lean-forward="true" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/migrations/next/20180308114601-create-players-statistics.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180308113207-create-players.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="47" lean-forward="true" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180308114602-create-contracts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -871,11 +692,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/load/index.js">
+    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.countries">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.contracts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        <state relative-caret-position="119">
+          <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.teams">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -892,48 +734,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.countries">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/load/load.js">
+    <entry file="file://$PROJECT_DIR$/server/load/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="111" column="33" lean-forward="false" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
-          <folding>
-            <element signature="e#505#2894#0" expanded="false" />
-            <element signature="e#597#2888#0" expanded="false" />
-            <element signature="e#2911#3328#0" expanded="false" />
-            <element signature="e#3361#3985#0" expanded="false" />
-            <element signature="e#5493#6103#0" expanded="false" />
-            <element signature="e#7948#11928#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/load/players.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="0" column="1043" lean-forward="false" selection-start-line="0" selection-start-column="1043" selection-end-line="0" selection-end-column="1043" />
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.contracts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -944,18 +749,228 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/server/models/commentsteams.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.teams">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/server/models/countries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/favoritesplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/favoritesteam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/players.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/teams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/contracts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/load/players.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/load/characteristics.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="0" column="684" lean-forward="false" selection-start-line="0" selection-start-column="674" selection-end-line="0" selection-end-column="684" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/commentsplayers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180403161030-create-comments-players.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180403161018-create-comments-teams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180403154354-create-favorites-team.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180403154322-create-favorites-player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180315104701-create-users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180308114602-create-contracts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180308114400-create-teams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180308113207-create-players.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180308113205-create-countries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="149" column="14" lean-forward="false" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/characteristics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="143" column="7" lean-forward="false" selection-start-line="143" selection-start-column="7" selection-end-line="143" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/load/load.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding>
+            <element signature="e#556#2961#0" expanded="false" />
+            <element signature="e#649#2955#0" expanded="false" />
+            <element signature="e#2979#3419#0" expanded="false" />
+            <element signature="e#3453#4080#0" expanded="false" />
+            <element signature="e#4110#5562#0" expanded="false" />
+            <element signature="e#5594#6203#0" expanded="false" />
+            <element signature="e#6256#8022#0" expanded="false" />
+            <element signature="e#8047#12029#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
