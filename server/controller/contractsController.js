@@ -3,6 +3,7 @@ const Contracts = require("../models").contracts;
 const Teams = require("../models").teams;
 const Countries = require('../models').countries;
 const CommentsPlayers = require('../models').commentsPlayers;
+const Characteristics = require('../models').characteristics;
 
 module.exports = {
     list(req, res){
@@ -36,6 +37,8 @@ module.exports = {
                     include:[{
                         model: Countries, as: 'country',
                     }]
+                },{
+                    model: Characteristics, as: 'characteristics',
                 }]
             })
             .then(contracts => res.status(200).send(contracts))

@@ -63,5 +63,6 @@ module.exports = (app, passport) => {
     // app.get('/main/load/countries', load.addCountriesToDB);
     // app.get('/main/load/teams', load.addTeamsToDB);
     // app.get('/main/load/players', load.addPlayersToDB);
-    // app.get('/main/load/contracts', load.addContractsAndPlayerStatistiscToDB);
+    // app.get('/main/load/contracts', load.addContractsAndPlayerStatisticsToDB);
+    //app.get('/main/load/characteristics', load.addCharacteristicsToDB);
 };

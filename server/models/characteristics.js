@@ -1,14 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const characteristics = sequelize.define('characteristics', {
-        refImage: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        reiting: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
         strongFoot: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -143,7 +135,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
     characteristics.associate = (models) => {
-        // associations can be defined here
+        characteristics.belongsTo(models.contracts, {
+            foreignKey: 'contractID',
+            onDelete: 'CASCADE',
+        });
     };
     return characteristics;
 };

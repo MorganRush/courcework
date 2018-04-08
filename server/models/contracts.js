@@ -43,6 +43,10 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'teamID',
             onDelete: 'CASCADE',
         });
+        contracts.hasOne(models.characteristics, {
+            foreignKey: 'contractID',
+            as: 'characteristics',
+        });
         // contracts.belongsTo(models.playersStatistics, {
         //     foreignKey: 'playersStatisticsID',
         //     onDelete: 'CASCADE',

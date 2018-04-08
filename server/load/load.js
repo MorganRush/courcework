@@ -10,8 +10,8 @@ const dataCharact = require('./characteristics');
 const Players = require('../models').players;
 const Contracts = require("../models").contracts;
 const Teams = require("../models").teams;
-const Cities = require('../models').cities;
 const Countries = require('../models').countries;
+const Characteristics = require('../models').characteristics;
 
 module.exports = {
 
@@ -164,7 +164,7 @@ module.exports = {
         res.status(200).send({message: 'ok'})
     },
 
-    addContractsAndPlayerStatistiscToDB(req, res) {
+    addContractsAndPlayerStatisticsToDB(req, res) {
         for (let i = 0; i < data.length; i++) {
             Teams
                 .findOne({
@@ -201,6 +201,62 @@ module.exports = {
                                 .catch((error) => console.log(error.message));
                         })
                         .catch((error) => console.log(error.message));
+                })
+                .catch((error) => console.log(error.message));
+        }
+        res.status(200).send({message: 'ok'})
+    },
+
+    addCharacteristicsToDB(req, res){
+        for (let i = 0; i < dataCharact.length; i++){
+            Contracts
+                .findOne({
+                    where: {refImage: data[i].refImage}
+                })
+                .then(contract => {
+                    if(contract != null){
+                        Characteristics
+                            .create({
+                                strongFoot: dataCharact[i].StrongFoot,
+                                age: dataCharact[i].age,
+                                height: dataCharact[i].height,
+                                workrates: dataCharact[i].workrates,
+                                acceleration: dataCharact[i].acceleration,
+                                sprintSpeed: dataCharact[i].sprintSpeed,
+                                positioning: dataCharact[i].positioning,
+                                finishing: dataCharact[i].finishing,
+                                shotPower: dataCharact[i].shotPower,
+                                longShots: dataCharact[i].longShots,
+                                volleys: dataCharact[i].volleys,
+                                penalties: dataCharact[i].penalties,
+                                vision: dataCharact[i].vision,
+                                crossing: dataCharact[i].crossing,
+                                freeKick: dataCharact[i].freeKick,
+                                shortPassing: dataCharact[i].shortPassing,
+                                longPassing: dataCharact[i].longPassing,
+                                curve: dataCharact[i].curve,
+                                agility: dataCharact[i].agility,
+                                balance: dataCharact[i].balance,
+                                reactions: dataCharact[i].reactions,
+                                ballControl: dataCharact[i].ballControl,
+                                dribbling: dataCharact[i].dribbling,
+                                composure: dataCharact[i].composure,
+                                interceptions: dataCharact[i].interceptions,
+                                heading: dataCharact[i].heading,
+                                marking: dataCharact[i].marking,
+                                standingTackle: dataCharact[i].standingTackle,
+                                slidingTackle: dataCharact[i].slidingTackle,
+                                jumping: dataCharact[i].jumping,
+                                stamina: dataCharact[i].stamina,
+                                strength: dataCharact[i].strength,
+                                aggression: dataCharact[i].aggression,
+                                contractID: contract.id
+                            })
+                            .then(characteristic => {
+                                console.log('successes');
+                            })
+                            .catch((error) => console.log(error.message));
+                    }
                 })
                 .catch((error) => console.log(error.message));
         }

@@ -8,14 +8,6 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            refImage: {
-                type: Sequelize.STRING,
-                allowNull: false,
-            },
-            reiting: {
-                type: Sequelize.INTEGER,
-                allowNull: false,
-            },
             strongFoot: {
                 type: Sequelize.STRING,
                 allowNull: false,
@@ -147,6 +139,15 @@ module.exports = {
             aggression: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
+            },
+            contractID: {
+                references: {
+                    model: 'contracts',
+                    key: 'id',
+                    as: 'characteristics'
+                },
+                onDelete: 'CASCADE',
+                type: Sequelize.INTEGER,
             },
             createdAt: {
                 allowNull: false,
