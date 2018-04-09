@@ -25,6 +25,30 @@ module.exports = {
             .catch(error => res.status(400).send(error));
     },
 
+    one(req, res){
+        return Contracts
+            .findOne({
+                where: {
+                    id: req.params.id,
+                },
+                include: [{
+                    model: Characteristics, as: 'characteristics',
+                },{
+                    model: Players, as: 'player',
+                    include: [{
+                        model: CommentsPlayers, as: 'commentsPlayers',
+                    }]
+                },{
+                    model: Teams, as: 'team',
+                    include: [{
+                        model: Countries, as: 'country',
+                    }]
+                }]
+            })
+            .then(contract => res.status(200).send(contract))
+            .catch(error => res.status(400).send(error));
+    },
+
     listLimit(req, res){
         return Contracts
             .findAll({
@@ -37,8 +61,6 @@ module.exports = {
                     include:[{
                         model: Countries, as: 'country',
                     }]
-                },{
-                    model: Characteristics, as: 'characteristics',
                 }]
             })
             .then(contracts => res.status(200).send(contracts))
@@ -50,11 +72,9 @@ module.exports = {
         return Contracts
             .findAll({
                 limit: req.params.limit,
+                offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
-                    // include:[{
-                    //     model: CommentsPlayers, as: 'commentsPlayers',
-                    // }],
                     where: { name: { $like: '%' + req.params.like + '%' } }
                 },{
                     model: Teams, as: 'team',
@@ -72,9 +92,6 @@ module.exports = {
             .findAll({
                 include:[{
                     model: Players, as: 'player',
-                    include:[{
-                        model: CommentsPlayers, as: 'commentsPlayers',
-                    }]
                 },{
                     model: Teams, as: 'team',
                     where: { name: req.params.team },

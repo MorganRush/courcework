@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="0a724ebe-f2c7-4c70-b717-98e155f1ad0a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/dff7403d-d3d7-4124-b204-622bf85b7843.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/dff7403d-d3d7-4124-b204-622bf85b7843.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dff7403d-d3d7-4124-b204-622bf85b7843/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/dff7403d-d3d7-4124-b204-622bf85b7843/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/server/controller/contractsController.js" afterPath="$PROJECT_DIR$/server/controller/contractsController.js" />
-      <change beforePath="$PROJECT_DIR$/server/load/load.js" afterPath="$PROJECT_DIR$/server/load/load.js" />
-      <change beforePath="$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js" afterPath="$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js" />
-      <change beforePath="$PROJECT_DIR$/server/models/characteristics.js" afterPath="$PROJECT_DIR$/server/models/characteristics.js" />
-      <change beforePath="$PROJECT_DIR$/server/models/contracts.js" afterPath="$PROJECT_DIR$/server/models/contracts.js" />
+      <change beforePath="$PROJECT_DIR$/server/controller/countriesController.js" afterPath="$PROJECT_DIR$/server/controller/countriesController.js" />
+      <change beforePath="$PROJECT_DIR$/server/controller/favoritesController.js" afterPath="$PROJECT_DIR$/server/controller/favoritesController.js" />
+      <change beforePath="$PROJECT_DIR$/server/controller/playerController.js" afterPath="$PROJECT_DIR$/server/controller/playerController.js" />
+      <change beforePath="$PROJECT_DIR$/server/controller/teamController.js" afterPath="$PROJECT_DIR$/server/controller/teamController.js" />
       <change beforePath="$PROJECT_DIR$/server/routes/index.js" afterPath="$PROJECT_DIR$/server/routes/index.js" />
+      <change beforePath="$PROJECT_DIR$/server/static/signin.html" afterPath="$PROJECT_DIR$/server/static/signin.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,34 +64,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="characteristics.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/models/characteristics.js">
+      <file leaf-file-name="playerController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controller/playerController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="61" />
+            <state relative-caret-position="119">
+              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
               <folding>
-                <element signature="e#123#3388#0" expanded="false" />
+                <element signature="e#84#251#0" expanded="false" />
+                <element signature="e#271#476#0" expanded="false" />
+                <element signature="e#499#723#0" expanded="false" />
+                <element signature="e#747#1368#0" expanded="false" />
+                <element signature="e#1391#1920#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20180408123649-create-characteristics.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -99,63 +83,53 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="60" column="69" lean-forward="true" selection-start-line="60" selection-start-column="69" selection-end-line="60" selection-end-column="69" />
+            <state relative-caret-position="445">
+              <caret line="62" column="85" lean-forward="true" selection-start-line="62" selection-start-column="85" selection-end-line="62" selection-end-column="85" />
               <folding>
-                <element signature="e#1087#1257#0" expanded="false" />
-                <element signature="e#1323#1494#0" expanded="false" />
-                <element signature="e#1567#1597#0" expanded="false" />
+                <element signature="e#558#661#0" expanded="false" />
+                <element signature="e#711#813#0" expanded="false" />
+                <element signature="e#846#884#0" expanded="false" />
+                <element signature="e#1161#1331#0" expanded="false" />
+                <element signature="e#1397#1568#0" expanded="false" />
+                <element signature="e#1641#1671#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/load/load.js">
+      <file leaf-file-name="countriesController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controller/countriesController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="263" column="6" lean-forward="true" selection-start-line="263" selection-start-column="6" selection-end-line="263" selection-end-column="6" />
+            <state relative-caret-position="340">
+              <caret line="25" column="72" lean-forward="true" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
               <folding>
-                <element signature="e#574#2979#0" expanded="false" />
-                <element signature="e#667#2973#0" expanded="false" />
-                <element signature="e#2997#3437#0" expanded="false" />
-                <element signature="e#3471#4098#0" expanded="false" />
-                <element signature="e#4128#5580#0" expanded="false" />
-                <element signature="e#5612#6221#0" expanded="false" />
-                <element signature="e#6274#8040#0" expanded="false" />
-                <element signature="e#8079#11154#0" expanded="false" />
-                <element signature="e#11179#15161#0" expanded="false" />
-                <element signature="n#!!block;n#find#0" expanded="false" />
+                <element signature="e#88#257#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="characteristics.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/load/characteristics.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="0" column="145" lean-forward="false" selection-start-line="0" selection-start-column="145" selection-end-line="0" selection-end-column="151" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contracts" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.contracts">
+      <file leaf-file-name="countries" pinned="false" current-in-tab="false">
+        <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.countries">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teamController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controller/teamController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="72" />
+              <folding>
+                <element signature="e#131#409#0" expanded="false" />
+                <element signature="e#1331#1666#0" expanded="false" />
+                <element signature="e#1689#1907#0" expanded="false" />
+                <element signature="e#1931#2538#0" expanded="false" />
+                <element signature="e#2561#3084#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,23 +137,54 @@
       <file leaf-file-name="contractsController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/controller/contractsController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-121">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="61" />
+            <state relative-caret-position="272">
+              <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="63" />
               <folding>
                 <element signature="e#350#940#0" expanded="false" />
-                <element signature="e#1648#2393#0" expanded="false" />
-                <element signature="e#2420#3065#0" expanded="false" />
-                <element signature="e#3095#3745#0" expanded="false" />
+                <element signature="e#960#1721#0" expanded="false" />
+                <element signature="e#2342#3016#0" expanded="false" />
+                <element signature="e#3043#3563#0" expanded="false" />
+                <element signature="e#3593#4243#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SequelizeMeta" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.SequelizeMeta">
+      <file leaf-file-name="signin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/static/signin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teams" pinned="false" current-in-tab="false">
+        <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.teams">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/static/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="countries.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/models/countries.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -229,8 +234,6 @@
         <option value="$PROJECT_DIR$/server/migrations/20180308113206-create-cities.js" />
         <option value="$PROJECT_DIR$/server/static/lol.html" />
         <option value="$PROJECT_DIR$/server/load/index.js" />
-        <option value="$PROJECT_DIR$/server/controller/teamController.js" />
-        <option value="$PROJECT_DIR$/server/controller/countriesController.js" />
         <option value="$PROJECT_DIR$/server/models/playersMaterializedView.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180308113210-create-players_materialized_view.js" />
         <option value="$PROJECT_DIR$/server/models/playersmaterializedview.js" />
@@ -240,11 +243,8 @@
         <option value="$PROJECT_DIR$/server/models/index.js" />
         <option value="$PROJECT_DIR$/server/config/index.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/dff7403d-d3d7-4124-b204-622bf85b7843/console.sql" />
-        <option value="$PROJECT_DIR$/server/controller/playerController.js" />
-        <option value="$PROJECT_DIR$/server/static/signin.html" />
         <option value="$PROJECT_DIR$/server/controller/commentsController.js" />
         <option value="$PROJECT_DIR$/server/controller/index.js" />
-        <option value="$PROJECT_DIR$/server/controller/favoritesController.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180406154523-create-players-statistics.js" />
         <option value="$PROJECT_DIR$/server/load/players.json" />
         <option value="$PROJECT_DIR$/server/models/playersstatistics.js" />
@@ -270,8 +270,13 @@
         <option value="$PROJECT_DIR$/server/migrations/20180308114602-create-contracts.js" />
         <option value="$PROJECT_DIR$/server/models/characteristics.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js" />
-        <option value="$PROJECT_DIR$/server/controller/contractsController.js" />
         <option value="$PROJECT_DIR$/server/load/load.js" />
+        <option value="$PROJECT_DIR$/server/controller/playerController.js" />
+        <option value="$PROJECT_DIR$/server/controller/favoritesController.js" />
+        <option value="$PROJECT_DIR$/server/controller/contractsController.js" />
+        <option value="$PROJECT_DIR$/server/static/signin.html" />
+        <option value="$PROJECT_DIR$/server/controller/teamController.js" />
+        <option value="$PROJECT_DIR$/server/controller/countriesController.js" />
         <option value="$PROJECT_DIR$/server/routes/index.js" />
       </list>
     </option>
@@ -292,9 +297,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="990" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -330,10 +336,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -350,7 +353,7 @@
               <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
               <item name="courcework" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="load" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
@@ -358,10 +361,19 @@
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courcework" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,7 +381,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../courcework-frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -515,12 +527,13 @@
       <workItem from="1522328398933" duration="12120000" />
       <workItem from="1522428103725" duration="22323000" />
       <workItem from="1522586483179" duration="32703000" />
-      <workItem from="1523024799252" duration="40184000" />
+      <workItem from="1523024799252" duration="55791000" />
+      <workItem from="1523286912647" duration="2707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202612000" />
+    <option name="totallyTimeSpent" value="220926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -538,9 +551,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13725491" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20801815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22541603" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114379086" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21104388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24508321" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -553,6 +565,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15849674" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114379086" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,157 +576,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/controller/commentsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.countries">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.teams">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/load/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.players">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/commentsteams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/countries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/favoritesplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/favoritesteam.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/teams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/load/players.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180403161030-create-comments-players.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180403161018-create-comments-teams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180403154354-create-favorites-team.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180403154322-create-favorites-player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/migrations/20180315104701-create-users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/migrations/20180308114400-create-teams.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-121">
           <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,15 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/commentsplayers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,9 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="49" />
-          <folding>
-            <element signature="e#111#869#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -852,34 +707,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controller/contractsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="61" />
-          <folding>
-            <element signature="e#350#940#0" expanded="false" />
-            <element signature="e#1648#2393#0" expanded="false" />
-            <element signature="e#2420#3065#0" expanded="false" />
-            <element signature="e#3095#3745#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/models/characteristics.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="61" />
-          <folding>
-            <element signature="e#123#3388#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -887,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="0" column="145" lean-forward="false" selection-start-line="0" selection-start-column="145" selection-end-line="0" selection-end-column="151" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,7 +766,7 @@
     <entry file="file://$PROJECT_DIR$/server/load/load.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
-          <caret line="263" column="6" lean-forward="true" selection-start-line="263" selection-start-column="6" selection-end-line="263" selection-end-column="6" />
+          <caret line="263" column="6" lean-forward="false" selection-start-line="263" selection-start-column="6" selection-end-line="263" selection-end-column="6" />
           <folding>
             <element signature="e#574#2979#0" expanded="false" />
             <element signature="e#667#2973#0" expanded="false" />
@@ -956,26 +793,198 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        <state relative-caret-position="357">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/commentsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/favoritesplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="68" lean-forward="true" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/authorizationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.players">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.favoritesPlayers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/passport/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="71" lean-forward="false" selection-start-line="81" selection-start-column="71" selection-end-line="81" selection-end-column="71" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/commentsplayers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/teams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/favoritesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/countries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/static/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.teams">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/contractsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="63" />
+          <folding>
+            <element signature="e#350#940#0" expanded="false" />
+            <element signature="e#960#1721#0" expanded="false" />
+            <element signature="e#2342#3016#0" expanded="false" />
+            <element signature="e#3043#3563#0" expanded="false" />
+            <element signature="e#3593#4243#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/playerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding>
+            <element signature="e#84#251#0" expanded="false" />
+            <element signature="e#271#476#0" expanded="false" />
+            <element signature="e#499#723#0" expanded="false" />
+            <element signature="e#747#1368#0" expanded="false" />
+            <element signature="e#1391#1920#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/teamController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="72" />
+          <folding>
+            <element signature="e#131#409#0" expanded="false" />
+            <element signature="e#1331#1666#0" expanded="false" />
+            <element signature="e#1689#1907#0" expanded="false" />
+            <element signature="e#1931#2538#0" expanded="false" />
+            <element signature="e#2561#3084#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/static/signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/countriesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="72" lean-forward="true" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+          <folding>
+            <element signature="e#88#257#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/cdafcf63/dff7403d-d3d7-4124-b204-622bf85b7843/postgres.public.countries">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="60" column="69" lean-forward="true" selection-start-line="60" selection-start-column="69" selection-end-line="60" selection-end-column="69" />
+        <state relative-caret-position="445">
+          <caret line="62" column="85" lean-forward="true" selection-start-line="62" selection-start-column="85" selection-end-line="62" selection-end-column="85" />
           <folding>
-            <element signature="e#1087#1257#0" expanded="false" />
-            <element signature="e#1323#1494#0" expanded="false" />
-            <element signature="e#1567#1597#0" expanded="false" />
+            <element signature="e#558#661#0" expanded="false" />
+            <element signature="e#711#813#0" expanded="false" />
+            <element signature="e#846#884#0" expanded="false" />
+            <element signature="e#1161#1331#0" expanded="false" />
+            <element signature="e#1397#1568#0" expanded="false" />
+            <element signature="e#1641#1671#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,7 +1,4 @@
 const Players = require('../models').players;
-const Contracts = require("../models").contracts;
-const Teams = require("../models").teams;
-const Countries = require('../models').countries;
 
 module.exports = {
     list(req, res){
@@ -10,12 +7,14 @@ module.exports = {
             .then((player) => res.status(200).send(player))
             .catch(error => res.status(400).send(error));
     },
+
     one(req, res){
         return Players
             .findOne({ where: {name: req.params.name }})
             .then((player) => res.status(200).send(player))
             .catch(error => res.status(400).send(error));
     },
+
     create(req, res){
         return Players
             .create({
@@ -24,6 +23,7 @@ module.exports = {
             .then((player) => res.status(201).send(player))
             .catch((error) => res.status(400).send(error));
     },
+
     update(req, res) {
         return Players
             .findById(req.params.id)
@@ -42,6 +42,7 @@ module.exports = {
             })
             .catch((error) => res.status(400).send(error));
     },
+
     delete(req, res){
         return Players
             .findById(req.params.id)

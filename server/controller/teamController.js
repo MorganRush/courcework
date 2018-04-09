@@ -12,10 +12,12 @@ module.exports = {
             .then(teams => res.status(200).send(teams))
             .catch(error => res.status(400).send(error));
     },
+
     listLimit(req, res){
         return Teams
             .findAll({
                 limit: req.params.limit,
+                offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Countries, as: 'country'
                 }]
@@ -23,6 +25,21 @@ module.exports = {
             .then(teams => res.status(200).send(teams))
             .catch(error => res.status(400).send(error));
     },
+
+    listLike(req, res){
+        return Teams
+            .findAll({
+                limit: req.params.limit,
+                offset: (req.params.limit * req.params.offset),
+                where: { name: { $like: '%' + req.params.like + '%' } },
+                include:[{
+                    model: Countries, as: 'country',
+                }],
+            })
+            .then(teams => res.status(200).send(teams))
+            .catch(error => res.status(400).send(error));
+    },
+
     listByCountry(req, res){
         return Teams
             .findAll({
@@ -43,6 +60,7 @@ module.exports = {
             .then((team) => res.status(201).send(team))
             .catch((error) => res.status(400).send(error));
     },
+
     update(req, res) {
         return Teams
             .findById(req.params.id)
@@ -61,6 +79,7 @@ module.exports = {
             })
             .catch((error) => res.status(400).send(error));
     },
+
     delete(req, res){
         return Teams
             .findById(req.params.id)

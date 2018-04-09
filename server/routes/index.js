@@ -4,6 +4,7 @@ const teamController = require('../controller').teamController;
 const countriesController = require('../controller').countriesController;
 const contractsController = require('../controller').contractsController;
 const load = require('../load').load;
+const favoritesController = require('../controller').favoritesController;
 
 module.exports = (app, passport) => {
 
@@ -44,21 +45,23 @@ module.exports = (app, passport) => {
         message: 'hw',
     }));
 
+    app.get('/main/contracts/:id', contractsController.one);
     app.get('/main/contracts/team/:team', contractsController.listByTeam);
     app.get('/main/contracts/:limit/:offset', contractsController.listLimit);
-    app.get('/main/contracts/like/:limit/:like', contractsController.listLike);
+    app.get('/main/contracts/like/:limit/:offset/:like', contractsController.listLike);
     app.get('/main/contracts/country/:country', contractsController.listByCountry);
-    app.get('/main/contracts', contractsController.list);
 
-    app.get('/main/teams', teamController.list);
-    app.get('/main/teams/:limit', teamController.listLimit);
+    app.get('/main/favorites/players', favoritesController.list);
+
+    app.get('/main/teams/:limit/:offset', teamController.listLimit);
+    app.get('/main/teams/like/:limit/:offset/:like', teamController.listLike);
     app.get('/main/teams/country/:country', teamController.listByCountry);
 
-    app.get('/main/players', playerController.list);
-    app.get('/main/players/:name', playerController.one);
+    // app.get('/main/players', playerController.list);
+    // app.get('/main/players/:name', playerController.one);
 
-    app.get('/main/countries', countriesController.list);
-    app.get('/main/countries/:limit', countriesController.listLimit);
+    app.get('/main/countries/like/:limit/:offset/:like', countriesController.listLike);
+    app.get('/main/countries/:limit/:offset', countriesController.listLimit);
 
     // app.get('/main/load/countries', load.addCountriesToDB);
     // app.get('/main/load/teams', load.addTeamsToDB);
