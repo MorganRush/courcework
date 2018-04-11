@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const session = require('express-session');
 const flash = require('connect-flash');
-const fs = require('fs');
 
 const load = require('./load/load');
 const config = require('./config');
@@ -14,14 +13,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(flash());
-
-// if (!fs.existsSync('./load/players.json')){
-//     console.log('Load data');
-//     load.loadFromFuthead();
-//     load.addToDB();
-// }
-
-// load.addToDB();
 
 app.use(session({secret: 'lol', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());

@@ -46,19 +46,20 @@ module.exports = (app, passport) => {
     }));
 
     app.get('/main/contracts/:id', contractsController.one);
-    app.get('/main/contracts/team/:team', contractsController.listByTeam);
     app.get('/main/contracts/:limit/:offset', contractsController.listLimit);
     app.get('/main/contracts/like/:limit/:offset/:like', contractsController.listLike);
-    app.get('/main/contracts/country/:country', contractsController.listByCountry);
+
+    app.get('/main/contracts/team/:id/:limit/:offset', contractsController.listByTeam);
+    app.get('/main/contracts/team/like/:id/:limit/:offset/:like', contractsController.listByTeamLike);
+
+    app.get('/main/contracts/country/:id/:limit/:offset', contractsController.listByCountry);
+    app.get('/main/contracts/country/like/:id/:limit/:offset/:like', contractsController.listByCountryLike);
 
     app.get('/main/favorites/players', favoritesController.list);
 
     app.get('/main/teams/:limit/:offset', teamController.listLimit);
     app.get('/main/teams/like/:limit/:offset/:like', teamController.listLike);
     app.get('/main/teams/country/:country', teamController.listByCountry);
-
-    // app.get('/main/players', playerController.list);
-    // app.get('/main/players/:name', playerController.one);
 
     app.get('/main/countries/like/:limit/:offset/:like', countriesController.listLike);
     app.get('/main/countries/:limit/:offset', countriesController.listLimit);

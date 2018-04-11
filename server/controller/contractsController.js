@@ -90,11 +90,33 @@ module.exports = {
     listByTeam(req, res){
         return Contracts
             .findAll({
+                limit: req.params.limit,
+                offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
                 },{
                     model: Teams, as: 'team',
-                    where: { name: req.params.team },
+                    where: { id: req.params.id },
+                    include:[{
+                        model: Countries, as: 'country',
+                    }]
+                }],
+            })
+            .then(contracts => res.status(200).send(contracts))
+            .catch(error => res.status(400).send(error));
+    },
+
+    listByTeamLike(req, res){
+        return Contracts
+            .findAll({
+                limit: req.params.limit,
+                offset: (req.params.limit * req.params.offset),
+                include:[{
+                    model: Players, as: 'player',
+                    where: { name: { $like: '%' + req.params.like + '%' } }
+                },{
+                    model: Teams, as: 'team',
+                    where: { id: req.params.id },
                     include:[{
                         model: Countries, as: 'country',
                     }]
@@ -107,16 +129,37 @@ module.exports = {
     listByCountry(req, res){
         return Contracts
             .findAll({
+                limit: req.params.limit,
+                offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
-                    include:[{
-                        model: CommentsPlayers, as: 'commentsPlayers',
-                    }]
                 },{
                     model: Teams, as: 'team',
+                    where: { countryId: req.params.id },
                     include:[{
                         model: Countries, as: 'country',
-                        where: { name: req.params.country }
+                        where: { id: req.params.id }
+                    }]
+                }]
+            })
+            .then(contracts => res.status(200).send(contracts))
+            .catch(error => res.status(400).send(error));
+    },
+
+    listByCountryLike(req, res){
+        return Contracts
+            .findAll({
+                limit: req.params.limit,
+                offset: (req.params.limit * req.params.offset),
+                include:[{
+                    model: Players, as: 'player',
+                    where: { name: { $like: '%' + req.params.like + '%' } }
+                },{
+                    model: Teams, as: 'team',
+                    where: { countryId: req.params.id },
+                    include:[{
+                        model: Countries, as: 'country',
+                        where: { id: req.params.id }
                     }]
                 }]
             })
