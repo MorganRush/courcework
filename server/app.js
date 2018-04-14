@@ -14,6 +14,8 @@ const pool = new Pool({
     ssl: true
 });
 
+const app = express();
+
 app.get('/db', async (req, res) => {
     try {
         const client = await pool.connect();
@@ -26,7 +28,6 @@ app.get('/db', async (req, res) => {
     }
 });
 
-const app = express();
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
