@@ -8,16 +8,16 @@ const favoritesController = require('../controller').favoritesController;
 
 module.exports = (app, passport) => {
 
-    const isLoggedIn = (req, resp, next) => {
+    const isLoggedIn = (req, res, next) => {
         if (req.isAuthenticated())
             return next();
-        resp.redirect('/signin');
+        res.redirect('/signin');
     };
 
-    const isNotLoggedIn = (req, resp, next) => {
+    const isNotLoggedIn = (req, res, next) => {
         if (!req.isAuthenticated())
             return next();
-        resp.redirect('/main');
+        res.redirect('/main');
     };
 
     app.get('/', (req, res) =>{
@@ -64,7 +64,14 @@ module.exports = (app, passport) => {
     app.get('/main/countries/like/:limit/:offset/:like', countriesController.listLike);
     app.get('/main/countries/:limit/:offset', countriesController.listLimit);
 
-    // app.get('/main/load/countries', load.addCountriesToDB);
+    app.get('/main/user/', (req, res, next) => {
+        if (req.isAuthenticated())
+            return next();
+        res.status(200).send({"login": null});
+    }, authorizationController.getUserName);
+
+
+    app.get('/main/load/countries', load.addCountriesToDB);
     // app.get('/main/load/teams', load.addTeamsToDB);
     // app.get('/main/load/players', load.addPlayersToDB);
     // app.get('/main/load/contracts', load.addContractsAndPlayerStatisticsToDB);

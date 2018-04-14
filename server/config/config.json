@@ -1,23 +1,27 @@
 {
   "development": {
+    "database": "postgres",
+    "username": "Matvey",
+    "password": null,
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+
+  "lol1": {
     "username": "Matvey",
     "password": null,
     "database": "postgres",
     "host": "localhost",
     "dialect": "postgres"
   },
-  "test": {
-    "username": "Matvey",
-    "password": null,
-    "database": "postgres",
-    "host": "localhost",
-    "dialect": "postgres"
-  },
-  "production": {
-    "username": "Matvey",
-    "password": null,
-    "database": "postgres",
-    "host": "localhost",
+
+  "lol": {
+    "use_env_variable": "DATABASE_URL",
+    "username": "mmxcxsfnpnucsz",
+    "password": "ccdba59bddd30de77136258f309ba0c3d19956125948112da4711491c6666471",
+    "database": "dcmfh2o15unikr",
+    "host": "ec2-54-197-254-189.compute-1.amazonaws.com",
+    "port": 5432,
     "dialect": "postgres"
   }
 }
