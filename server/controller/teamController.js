@@ -4,11 +4,7 @@ const Countries = require('../models').countries;
 module.exports = {
     list(req, res) {
         return Teams
-            .findAll({
-                include:[{
-                    model: Countries, as: 'country'
-                }]
-            })
+            .findAll()
             .then(teams => res.status(200).send(teams))
             .catch(error => res.status(400).send(error));
     },
@@ -18,9 +14,6 @@ module.exports = {
             .findAll({
                 limit: req.params.limit,
                 offset: (req.params.limit * req.params.offset),
-                include:[{
-                    model: Countries, as: 'country'
-                }]
             })
             .then(teams => res.status(200).send(teams))
             .catch(error => res.status(400).send(error));
@@ -32,21 +25,6 @@ module.exports = {
                 limit: req.params.limit,
                 offset: (req.params.limit * req.params.offset),
                 where: { name: { $like: '%' + req.params.like + '%' } },
-                include:[{
-                    model: Countries, as: 'country',
-                }],
-            })
-            .then(teams => res.status(200).send(teams))
-            .catch(error => res.status(400).send(error));
-    },
-
-    listByCountry(req, res){
-        return Teams
-            .findAll({
-                include:[{
-                    model: Countries, as: 'country',
-                    where: { name: req.params.country }
-                }]
             })
             .then(teams => res.status(200).send(teams))
             .catch(error => res.status(400).send(error));

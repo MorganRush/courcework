@@ -19,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'playerID',
             as: 'commentsPlayers',
         });
-        // players.hasMany(models.playerStatistics, {
-        //     foreignKey: 'playerID',
-        //     as: 'playerStatistics',
-        // });
+        players.belongsTo(models.countries, {
+            foreignKey: 'countryId',
+            onDelete: 'CASCADE',
+        });
     };
     return players;
 };

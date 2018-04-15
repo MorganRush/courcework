@@ -1,5 +1,13 @@
 {
   "development": {
+    "username": "Matvey",
+    "password": null,
+    "database": "postgres",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+
+  "remote": {
     "use_env_variable": "DATABASE_URL",
     "dialect": "postgres",
     "ssl": true,
@@ -8,13 +16,5 @@
         "require": true
       }
     }
-  },
-
-  "local": {
-    "username": "Matvey",
-    "password": null,
-    "database": "postgres",
-    "host": "localhost",
-    "dialect": "postgres"
   }
 }

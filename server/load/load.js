@@ -114,31 +114,17 @@ module.exports = {
                 let team = {};
                 team.name = data[i].team;
                 team.refClubs = data[i].refClubs;
-                team.refNations = data[i].refNations;
                 teams.push(team);
             }
         }
         for (let i = 0; i < 100; i++) {
-            Countries
-                .findOne({
-                    where: {refNations: teams[i].refNations}
+            Teams
+                .create({
+                    name: teams[i].name,
+                    refClubs: teams[i].refClubs,
                 })
-                .then(country => {
-                    if (country === null) {
-                        console.log('lol');
-                    }
-                    else{
-                        Teams
-                            .create({
-                                name: teams[i].name,
-                                refClubs: teams[i].refClubs,
-                                countryId: country.id,
-                            })
-                            .then((team) => {
-                                console.log('successes');
-                            })
-                            .catch((error) => console.log(error.message));
-                    }
+                .then((team) => {
+                    console.log('successes');
                 })
                 .catch((error) => console.log(error.message));
         }
@@ -148,25 +134,46 @@ module.exports = {
     addPlayersToDB(req, res) {
         const players = [];
         for (let i = 0; i < data.length; i++) {
-            if (find(players, data[i].name) === -1) {
-                players.push(data[i].name);
+            let isExist = false;
+            for (let j = 0; j < players.length; j++) {
+                if (players[j].name === data[i].name) {
+                    isExist = true;
+                }
+            }
+            if (!isExist) {
+                let player = {};
+                player.name = data[i].name;
+                player.refNations = data[i].refNations;
+                players.push(player);
             }
         }
-        //console.log(players);
         for (let i = 0; i < 1000; i++) {
-            Players
-                .create({
-                    name: players[i],
+            Countries
+                .findOne({
+                    where: {refNations: players[i].refNations}
                 })
-                .then(player => {
-                    console.log('successes');
+                .then(country => {
+                    if (country === null) {
+                        console.log('country not found');
+                    }
+                    else{
+                        Players
+                            .create({
+                                name: players[i].name,
+                                countryId: country.id,
+                            })
+                            .then(player => {
+                                console.log('successes');
+                            })
+                            .catch((error) => console.log(error.message));
+                    }
                 })
                 .catch((error) => console.log(error.message));
         }
-        res.status(200).send({message: 'ok'})
+        res.status(200).send({message: 'ok'});
     },
 
-    addContractsAndPlayerStatisticsToDB(req, res) {
+    addContractsAndPlayerStatisticsAndCharactToDB(req, res) {
         for (let i = 0; i < 2000; i++) {
             Teams
                 .findOne({
@@ -174,7 +181,7 @@ module.exports = {
                 })
                 .then(team => {
                     if (team === null) {
-                        console.log('lol');
+                        console.log('team not found');
                     }
                     else {
                         Players
@@ -183,7 +190,7 @@ module.exports = {
                             })
                             .then(player => {
                                 if (player === null) {
-                                    console.log('lol');
+                                    console.log('player not found');
                                 }
                                 else{
                                     Contracts
@@ -208,7 +215,7 @@ module.exports = {
                                             }
                                             let indexSecond = index;
                                             if (index !== -1){
-                                                if (dataCharact[index].StrongFoot !== "Right" ||
+                                                if (dataCharact[index].StrongFoot !== "Right" &&
                                                     dataCharact[index].StrongFoot !== "Left"){
                                                     indexSecond = 0;
                                                 }
@@ -255,15 +262,16 @@ module.exports = {
                                                     .catch((error) => console.log(error.message));
                                             }
                                             else {
-                                                let reiting = data[i].reiting;
-                                                index = i;
-                                                if (index > 99){
-                                                    index = getRandomInt(0, 99);
-                                                }
+                                                index = index = getRandomInt(0, 99);
                                                 indexSecond = index;
-                                                if (dataCharact[index].StrongFoot !== "Right" ||
+                                                if (dataCharact[index].StrongFoot !== "Right" &&
                                                     dataCharact[index].StrongFoot !== "Left"){
                                                     indexSecond = 0;
+                                                }
+                                                let min = data[i].reiting - 10;
+                                                let max = data[i].reiting + 10;
+                                                if (max > 99){
+                                                    max = 99;
                                                 }
                                                 Characteristics
                                                     .create({
@@ -271,35 +279,35 @@ module.exports = {
                                                         age: dataCharact[indexSecond].age,
                                                         height: dataCharact[indexSecond].height,
                                                         workrates: dataCharact[indexSecond].workrates,
-                                                        acceleration: getRandomInt(reiting - 10, reiting + 10),
-                                                        sprintSpeed: getRandomInt(reiting - 10, reiting + 10),
-                                                        positioning: getRandomInt(reiting - 10, reiting + 10),
-                                                        finishing: getRandomInt(reiting - 10, reiting + 10),
-                                                        shotPower: getRandomInt(reiting - 10, reiting + 10),
-                                                        longShots: getRandomInt(reiting - 10, reiting + 10),
-                                                        volleys: getRandomInt(reiting - 10, reiting + 10),
-                                                        penalties: getRandomInt(reiting - 10, reiting + 10),
-                                                        vision: getRandomInt(reiting - 10, reiting + 10),
-                                                        crossing: getRandomInt(reiting - 10, reiting + 10),
-                                                        freeKick: getRandomInt(reiting - 10, reiting + 10),
-                                                        shortPassing: getRandomInt(reiting - 10, reiting + 10),
-                                                        longPassing: getRandomInt(reiting - 10, reiting + 10),
-                                                        curve: getRandomInt(reiting - 10, reiting + 10),
-                                                        agility: getRandomInt(reiting - 10, reiting + 10),
-                                                        balance: getRandomInt(reiting - 10, reiting + 10),
-                                                        reactions: getRandomInt(reiting - 10, reiting + 10),
-                                                        ballControl: getRandomInt(reiting - 10, reiting + 10),
-                                                        dribbling: getRandomInt(reiting - 10, reiting + 10),
-                                                        composure: getRandomInt(reiting - 10, reiting + 10),
-                                                        interceptions: getRandomInt(reiting - 10, reiting + 10),
-                                                        heading: getRandomInt(reiting - 10, reiting + 10),
-                                                        marking: getRandomInt(reiting - 10, reiting + 10),
-                                                        standingTackle: getRandomInt(reiting - 10, reiting + 10),
-                                                        slidingTackle: getRandomInt(reiting - 10, reiting + 10),
-                                                        jumping: getRandomInt(reiting - 10, reiting + 10),
-                                                        stamina: getRandomInt(reiting - 10, reiting + 10),
-                                                        strength: getRandomInt(reiting - 10, reiting + 10),
-                                                        aggression: getRandomInt(reiting - 10, reiting + 10),
+                                                        acceleration: getRandomInt(min, max),
+                                                        sprintSpeed: getRandomInt(min, max),
+                                                        positioning: getRandomInt(min, max),
+                                                        finishing: getRandomInt(min, max),
+                                                        shotPower: getRandomInt(min, max),
+                                                        longShots: getRandomInt(min, max),
+                                                        volleys: getRandomInt(min, max),
+                                                        penalties: getRandomInt(min, max),
+                                                        vision: getRandomInt(min, max),
+                                                        crossing: getRandomInt(min, max),
+                                                        freeKick: getRandomInt(min, max),
+                                                        shortPassing: getRandomInt(min, max),
+                                                        longPassing: getRandomInt(min, max),
+                                                        curve: getRandomInt(min, max),
+                                                        agility: getRandomInt(min, max),
+                                                        balance: getRandomInt(min, max),
+                                                        reactions: getRandomInt(min, max),
+                                                        ballControl: getRandomInt(min, max),
+                                                        dribbling: getRandomInt(min, max),
+                                                        composure: getRandomInt(min, max),
+                                                        interceptions: getRandomInt(min, max),
+                                                        heading: getRandomInt(min, max),
+                                                        marking: getRandomInt(min, max),
+                                                        standingTackle: getRandomInt(min, max),
+                                                        slidingTackle: getRandomInt(min, max),
+                                                        jumping: getRandomInt(min, max),
+                                                        stamina: getRandomInt(min, max),
+                                                        strength: getRandomInt(min, max),
+                                                        aggression: getRandomInt(min, max),
                                                         contractID: contract.id
                                                     })
                                                     .then(characteristic => {

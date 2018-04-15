@@ -15,17 +15,9 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'userID',
             as: 'favoritesPlayer',
         });
-        users.hasMany(models.favoritesTeam, {
-            foreignKey: 'userID',
-            as: 'favoritesTeam',
-        });
         users.hasMany(models.commentsPlayers, {
             foreignKey: 'userID',
             as: 'commentsPlayers',
-        });
-        users.hasMany(models.commentsTeams, {
-            foreignKey: 'userID',
-            as: 'commentsTeams',
         });
     };
     return users;

@@ -13,12 +13,11 @@ module.exports = {
                     model: Players, as: 'player',
                     include:[{
                         model: CommentsPlayers, as: 'commentsPlayers',
-                    }]
+                    },{
+                        model: Countries, as: 'country',
+                    }],
                 },{
                     model: Teams, as: 'team',
-                    include:[{
-                        model: Countries, as: 'country',
-                    }]
                 }]
             })
             .then(contracts => res.status(200).send(contracts))
@@ -37,12 +36,11 @@ module.exports = {
                     model: Players, as: 'player',
                     include: [{
                         model: CommentsPlayers, as: 'commentsPlayers',
+                    },{
+                        model: Countries, as: 'country',
                     }]
                 },{
                     model: Teams, as: 'team',
-                    include: [{
-                        model: Countries, as: 'country',
-                    }]
                 }]
             })
             .then(contract => res.status(200).send(contract))
@@ -56,31 +54,30 @@ module.exports = {
                 offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
-                },{
-                    model: Teams, as: 'team',
                     include:[{
                         model: Countries, as: 'country',
                     }]
+                },{
+                    model: Teams, as: 'team',
                 }]
             })
             .then(contracts => res.status(200).send(contracts))
-            //.catch(error => res.status(400).send(error));
+            .catch(error => res.status(400).send(error));
     },
 
     listLike(req, res){
-        console.log("lol");
         return Contracts
             .findAll({
                 limit: req.params.limit,
                 offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
+                    include:[{
+                        model: Countries, as: 'country',
+                    }],
                     where: { name: { $like: '%' + req.params.like + '%' } }
                 },{
                     model: Teams, as: 'team',
-                    include:[{
-                        model: Countries, as: 'country',
-                    }]
                 }]
             })
             .then(contracts => res.status(200).send(contracts))
@@ -94,12 +91,12 @@ module.exports = {
                 offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
-                },{
-                    model: Teams, as: 'team',
-                    where: { id: req.params.id },
                     include:[{
                         model: Countries, as: 'country',
                     }]
+                },{
+                    model: Teams, as: 'team',
+                    where: { id: req.params.id },
                 }],
             })
             .then(contracts => res.status(200).send(contracts))
@@ -113,13 +110,13 @@ module.exports = {
                 offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
+                    include:[{
+                        model: Countries, as: 'country',
+                    }],
                     where: { name: { $like: '%' + req.params.like + '%' } }
                 },{
                     model: Teams, as: 'team',
                     where: { id: req.params.id },
-                    include:[{
-                        model: Countries, as: 'country',
-                    }]
                 }],
             })
             .then(contracts => res.status(200).send(contracts))
@@ -133,13 +130,13 @@ module.exports = {
                 offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
-                },{
-                    model: Teams, as: 'team',
-                    where: { countryId: req.params.id },
                     include:[{
                         model: Countries, as: 'country',
                         where: { id: req.params.id }
-                    }]
+                    }],
+                    where: { countryId: req.params.id },
+                },{
+                    model: Teams, as: 'team',
                 }]
             })
             .then(contracts => res.status(200).send(contracts))
@@ -153,14 +150,16 @@ module.exports = {
                 offset: (req.params.limit * req.params.offset),
                 include:[{
                     model: Players, as: 'player',
-                    where: { name: { $like: '%' + req.params.like + '%' } }
-                },{
-                    model: Teams, as: 'team',
-                    where: { countryId: req.params.id },
                     include:[{
                         model: Countries, as: 'country',
                         where: { id: req.params.id }
-                    }]
+                    }],
+                    where: {
+                        name: { $like: '%' + req.params.like + '%' },
+                        countryId: req.params.id
+                    }
+                },{
+                    model: Teams, as: 'team',
                 }]
             })
             .then(contracts => res.status(200).send(contracts))

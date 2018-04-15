@@ -15,22 +15,6 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'teamID',
             as: 'contracts',
         });
-        teams.hasMany(models.favoritesTeam, {
-            foreignKey: 'teamID',
-            as: 'favoritesTeam',
-        });
-        teams.hasMany(models.commentsTeams, {
-            foreignKey: 'teamID',
-            as: 'commentsTeams',
-        });
-        // teams.hasMany(models.teamStatistics, {
-        //     foreignKey: 'teamID',
-        //     as: 'teamStatistics',
-        // });
-        teams.belongsTo(models.countries, {
-            foreignKey: 'countryId',
-            onDelete: 'SET NULL',
-        });
     };
     return teams;
 };

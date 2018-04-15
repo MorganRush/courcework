@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
     countries.associate = function (models) {
-        countries.hasMany(models.teams, {
+        countries.hasMany(models.players, {
             foreignKey: 'countryId',
-            as: 'teams',
+            as: 'players',
         });
     };
     return countries;

@@ -12,6 +12,15 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
+            countryId: {
+                references: {
+                    model: 'countries',
+                    key: 'id',
+                    as: 'cities'
+                },
+                onDelete: 'CASCADE',
+                type: Sequelize.INTEGER,
+            },
             createdAt: {
                 allowNull: true,
                 type: Sequelize.DATE

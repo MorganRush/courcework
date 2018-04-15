@@ -59,7 +59,6 @@ module.exports = (app, passport) => {
 
     app.get('/main/teams/:limit/:offset', teamController.listLimit);
     app.get('/main/teams/like/:limit/:offset/:like', teamController.listLike);
-    app.get('/main/teams/country/:country', teamController.listByCountry);
 
     app.get('/main/countries/like/:limit/:offset/:like', countriesController.listLike);
     app.get('/main/countries/:limit/:offset', countriesController.listLimit);
@@ -71,9 +70,8 @@ module.exports = (app, passport) => {
     }, authorizationController.getUserName);
 
 
-        app.get('/main/load/countries', load.addCountriesToDB);
-    // app.get('/main/load/teams', load.addTeamsToDB);
-    // app.get('/main/load/players', load.addPlayersToDB);
-    // app.get('/main/load/contracts', load.addContractsAndPlayerStatisticsToDB);
-    //app.get('/main/load/characteristics', load.addCharacteristicsToDB);
+    app.get('/main/load/countries', load.addCountriesToDB);
+    app.get('/main/load/teams', load.addTeamsToDB);
+    app.get('/main/load/players', load.addPlayersToDB);
+    app.get('/main/load/contracts', load.addContractsAndPlayerStatisticsAndCharactToDB);
 };
