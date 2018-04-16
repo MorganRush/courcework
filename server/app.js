@@ -4,28 +4,10 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const session = require('express-session');
 const flash = require('connect-flash');
-
+const path = require('path');
 const load = require('./load/load');
-//const config = require('./config');
-
-const { Pool } = require('pg');
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true
-});
 
 const app = express();
-
-app.get('/db', async (req, res) => {
-    try {
-        const client = await pool.connect();
-        const result = await client.query('SELECT * FROM test');
-        res.status(200).send(result);
-    } catch (err) {
-        console.error(err);
-        res.send("Error " + err);
-    }
-});
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -39,6 +21,10 @@ require('./passport/index')(passport);
 
 app.use(express.static(__dirname + '/static'));
 require('./routes/index')(app, passport);
+
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/static/index.html');
+});
 
 module.exports = app;
 

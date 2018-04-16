@@ -1,0 +1,62 @@
+.App {
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.App-title {
+  font-size: 1.5em;
+}
+.App-intro {
+  font-size: large;
+}
+/*html, body {*/
+  /*height: 100%;*/
+  /*overflow: hidden;*/
+/*}*/
+.walkway-oblique{
+  font-family: "Walkway Oblique";
+}
+.oblique{
+  font-style: italic ;
+}
+.margin-center{
+  margin: auto;
+}
+.welcome{
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 600;
+  margin: 50px 0;
+  float: none;
+  display: block;
+  font-size: 60px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.home-ref{
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 500;
+  margin: 0 10px;
+  float: none;
+  color: #940000;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+iframe{
+  margin: 30px;
+}
+.homepage{
+  height: 100vh;
+  margin: auto;
+  padding: 15px;
+  width: 1000px;
+  background-color: #fff;
+}
+

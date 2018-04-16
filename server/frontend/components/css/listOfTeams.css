@@ -1,0 +1,60 @@
+.stream-col-40{
+    display: inline-block;
+    width: 40px;
+}
+.stream-col-50{
+    display: inline-block;
+    width: 50px;
+}
+.stream-col-60{
+    display: inline-block;
+    width: 60px;
+}
+.stream-col-80{
+    display: inline-block;
+    width: 80px;
+}
+.list-group{
+    border-radius: 2px;
+    border-top: 3px solid #940000;
+}
+.display-block{
+    display: block;
+}
+.text-center {
+    text-align: center;
+}
+.team-info {
+    position: relative;
+    height: 40px;
+    width: 330px;
+    display: inline-block;
+    text-align: left;
+}
+.team-image {
+    width: 80px;
+}
+.team-info .team-name {
+    top: 0;
+    font-size: 20px;
+}
+.team-info .team-name {
+    position: absolute;
+    left: 10px;
+}
+.team-info .team-country-image, .team-info .team-country {
+    top: 28px;
+}
+.team-info .team-country-image{
+    position: absolute;
+    left: 10px;
+    width: 18px;
+}
+.team-info .team-country {
+    position: absolute;
+    left: 30px;
+    font-size: 12px;
+}
+.team-item{
+    border-top: 1px solid #eee;
+}

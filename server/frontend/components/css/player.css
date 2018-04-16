@@ -1,0 +1,148 @@
+.player-detail .player-stats .player-stat-group {
+    margin-top: 20px;
+}
+.player-stat-group{
+    max-height: 50px;
+    position: relative;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.player-group{
+    position: relative;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: 3px solid #940000;
+    margin: 20px 10%;
+}
+.player-stats-igs{
+    background-color: white;
+}
+.stat-chart {
+    min-height: 50px;
+    margin-top: -2px;
+    margin-bottom: 16px;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.padding-0 {
+    padding: 0!important;
+}
+.container .col-xs-6 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.igs-group {
+    position: relative;
+    min-height: 300px;
+    padding-bottom: 10px;
+}
+@media (min-width: 768px){
+    .col-sm-4 {
+        width: 16.66666666%;
+    }}
+@media (min-width: 768px){
+.col-sm-4 {
+    display: inline-table;
+    }}
+.divided-row.sm {
+    margin: auto 20px;
+}
+.player-stat-row {
+    position: relative;
+    font-weight: 400;
+}
+.player-detail .player-info .player-info-main .player-cards {
+    position: relative;
+    filter: drop-shadow(0 0 15px #162f71);
+    width: 200px;
+    height: 315px;
+    background-size: 103%;
+    color: #fff;
+    position: relative;
+    font-family: 'DINPro Cond';
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fut18.playercard.card-large .playercard-rating {
+    top: 35px;
+    font-size: 34px;
+    font-weight: 500;
+}
+.tab.in {
+    display: block;
+}
+.tab {
+    float: right;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+.font-12 {
+    font-size: 12px;
+}
+.margin-t-16 {
+    margin: 16px 0 0 0!important;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.col-xs-7 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+.pull-right {
+    float: right!important;
+}
+.player-sidebar-item .player-sidebar-value {
+    font-weight: 500;
+}
+.col-xs-5 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+.player-sidebar-item img {
+    margin-top: -2px;
+    margin-right: 6px;
+}
+.img-12, .img-12>img {
+    width: 12px!important;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+/*.width-30{*/
+    /*width: 30%;*/
+/*}*/
+.width-70{
+    width: 300px;
+    margin-left: 30%;
+}
+.player-cards{
+    display: inline-flex;
+    width: 100%;
+}
+.playercard{
+    width: 175px;
+    margin-left: 10%;
+}
