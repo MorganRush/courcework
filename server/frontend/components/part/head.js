@@ -141,7 +141,7 @@ class Head extends Component {
             {/*</ul>*/}
             <ul>
               <li><Link class="text-white" to="/">Home</Link></li>
-              <li><a class="text-white" href="/players">Players</a></li>
+              <li><Link class="text-white" to="/players">Players</Link></li>
               <li><Link class="text-white" to="/countries">Nations</Link></li>
               <li><Link class="text-white" to="/teams">Clubs</Link></li>
               <li class="margin-right-25 float-right" hidden={this.state.isAuth}><a class="text-white" href="/signup" hidden={this.state.isAuth}>Sign up</a></li>

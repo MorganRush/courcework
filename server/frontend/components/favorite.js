@@ -207,7 +207,7 @@ class Favorite extends Component {
                             success: function (data) {
                               this.setState({isAuth: true});
                               this.props.onDeleteContracts();
-                              console.log('lolka');
+                              this.state.offset = 0;
                               this.addContracts();
                             }.bind(this),
                             error: function (xhr, status, err) {

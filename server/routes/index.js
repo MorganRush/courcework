@@ -43,6 +43,7 @@ module.exports = (app, passport) => {
   app.get('/main/contracts/:id', contractsController.one);
   app.get('/main/contracts/:limit/:offset', contractsController.listLimit);
   app.get('/main/contracts/like/:limit/:offset/:like', contractsController.listLike);
+
   app.get('/main/contracts/favorite/:limit/:offset', (req, res, next) => {
     if (req.isAuthenticated()) {
       return next();
