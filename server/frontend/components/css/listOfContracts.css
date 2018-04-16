@@ -92,7 +92,8 @@ li {
 }
 .navbar.navbar-futhead {
     background-color: #333;
-    border-bottom: 3px solid #940000;
+    margin-top: -10px;
+    /*border-bottom: 3px solid #940000;*/
 }
 nav.navbar {
     min-height: 0;
@@ -159,11 +160,11 @@ nav.navbar .navbar-collapse {
     display: none;
 }
 .navbar .nav.navbar-nav {
-    margin-left: -12px;
+    margin-left: -50px;
 }
 .nav {
     margin-bottom: 0;
-    padding-left: 0;
+    /*padding-left: 0;*/
     list-style: none;
 }
 
@@ -391,6 +392,12 @@ a:-webkit-any-link {
     .container {
         width: 750px;
     }}
+@media (max-width: 1050px){
+    .hidden-1050{
+        visibility: hidden;
+        width: 0;
+    }
+}
 @media (min-width: 768px){
     #mobile-navbar .navbar-nav {
         float: none;

@@ -25,7 +25,6 @@ class ListOfContract extends Component {
     this.loadName = this.loadName.bind(this);
     this.handleScrollCallback = this.handleScrollCallback.bind(this);
     this.findContracts = this.findContracts.bind(this);
-    //this.addFavorite = this.addFavorite.bind(this)
   }
 
   componentDidMount() {
@@ -129,6 +128,20 @@ class ListOfContract extends Component {
     });
   }
 
+  addFavorite(id){
+    $.ajax({
+      type: "POST",
+      url: '/main/add/favorite/' + id,
+      cache: false,
+      success: function (data) {
+        this.setState({isAuth: true});
+      }.bind(this),
+      error: function (xhr, status, err) {
+        console.error('/main/add/comment/' + id, status, err.toString());
+      }
+    });
+  }
+
   render() {
     return (
       <div className="ListOfContract">
@@ -212,7 +225,19 @@ class ListOfContract extends Component {
                         <span class="hover-label">PHY</span>
                       </span>
                       <span class="player-stat stream-col-60" hidden={!this.state.isAuth}>
-                        <button onClick={addFavorite(contract.player.id)}>
+                        <button onClick={() =>{
+                          $.ajax({
+                            type: "POST",
+                            url: '/main/add/favorite/' + contract.player.id,
+                            cache: false,
+                            success: function (data) {
+                              this.setState({isAuth: true});
+                            }.bind(this),
+                            error: function (xhr, status, err) {
+                              console.error('/main/add/comment/' + id, status, err.toString());
+                            }
+                          });
+                        }}>
                           <span class="value">
                             <div hidden={this.state.isFavorite}><i
                               class="material-icons">favorite_border</i></div>
@@ -248,17 +273,3 @@ export default connect(
     }
   })
 )(ListOfContract);
-
-function addFavorite(id){
-  $.ajax({
-    type: "POST",
-    url: '/main/add/favorite/' + id,
-    cache: false,
-    success: function (data) {
-      this.setState({isAuth: true});
-    }.bind(this),
-    error: function (xhr, status, err) {
-      console.error('/main/add/comment/' + id, status, err.toString());
-    }
-  });
-}

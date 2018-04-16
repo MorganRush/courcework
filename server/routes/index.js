@@ -89,6 +89,13 @@ module.exports = (app, passport) => {
     res.status(200);
   }, favoritesController.create);
 
+  app.post('/main/add/favorite/delete/:id', (req, res, next) => {
+    if (req.isAuthenticated()) {
+      return next();
+    }
+    res.status(200);
+  }, favoritesController.delete);
+
   // app.get('/main/load/countries', load.addCountriesToDB);
   // app.get('/main/load/teams', load.addTeamsToDB);
   // app.get('/main/load/players', load.addPlayersToDB);

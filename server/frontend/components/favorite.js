@@ -25,7 +25,6 @@ class Favorite extends Component {
     this.loadName = this.loadName.bind(this);
     this.handleScrollCallback = this.handleScrollCallback.bind(this);
     this.findContracts = this.findContracts.bind(this);
-    this.addFavorite = this.addFavorite.bind(this)
   }
 
   componentDidMount() {
@@ -45,10 +44,6 @@ class Favorite extends Component {
         this.findContracts();
       }
     }
-  }
-
-  getUserFavorite() {
-
   }
 
   inputChange() {
@@ -119,10 +114,6 @@ class Favorite extends Component {
         console.error(urlOnUserName, status, err.toString());
       }
     });
-  }
-
-  addFavorite(id){
-    console.log('lolka');
   }
 
   render() {
@@ -208,14 +199,29 @@ class Favorite extends Component {
                         <span class="hover-label">PHY</span>
                       </span>
                       <span class="player-stat stream-col-60" hidden={!this.state.isAuth}>
-                        <a href="#" onClick={this.addFavorite(contract.id)}>
+                        <button onClick={() =>{
+                          $.ajax({
+                            type: "POST",
+                            url: '/main/add/favorite/delete/' + contract.player.id,
+                            cache: false,
+                            success: function (data) {
+                              this.setState({isAuth: true});
+                              this.props.onDeleteContracts();
+                              console.log('lolka');
+                              this.addContracts();
+                            }.bind(this),
+                            error: function (xhr, status, err) {
+                              console.error('/main/add/comment/' + id, status, err.toString());
+                            }
+                          });
+                        }}>
                           <span class="value">
                             <div hidden={this.state.isFavorite}><i
                               class="material-icons">favorite_border</i></div>
                             <div hidden={!this.state.isFavorite}><i
                               class="material-icons">favorite</i></div>
                           </span>
-                        </a>
+                        </button>
                       </span>
                     </span>
                 </div>
