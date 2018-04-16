@@ -34,6 +34,7 @@ nav ul li a:hover {
         visibility: hidden;
     }
     .nav-container {
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -128,6 +129,7 @@ nav ul li a:hover {
     transform: translateY(-6px) rotate(90deg);
 }
 #nav:checked ~ .nav-container {
+    display: block;
     z-index: 9990;
     opacity: 1;
 }
@@ -150,4 +152,8 @@ nav ul li a:hover {
 }
 .float-right{
     float: right;
+}
+.fav-btn{
+    border: none;
+    background: none;
 }

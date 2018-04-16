@@ -199,7 +199,7 @@ class Favorite extends Component {
                         <span class="hover-label">PHY</span>
                       </span>
                       <span class="player-stat stream-col-60" hidden={!this.state.isAuth}>
-                        <button onClick={() =>{
+                        <button class="fav-btn" onClick={() =>{
                           $.ajax({
                             type: "POST",
                             url: '/main/add/favorite/delete/' + contract.player.id,

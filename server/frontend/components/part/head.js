@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/App.css';
+import '../css/head.css'
 import { Link } from 'react-router';
 import $ from "jquery";
 
@@ -101,9 +102,9 @@ class Head extends Component {
           <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'/>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"/>
         </head>
-        <nav class="navbar navbar-futhead navbar-fixed-top app-navbar">
-          <input type="checkbox" id="nav" class="hidden"/>
-          <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+        <nav class="navbar navbar-futhead navbar-fixed-top app-navbar" >
+          <input  type="checkbox" id="nav" class="hidden"/>
+          <label  for="nav" class="nav-open"><i></i><i></i><i></i></label>
           <div class="nav-container">
             {/*<ul>*/}
             {/*<ul class="nav navbar-nav ">*/}
@@ -139,15 +140,15 @@ class Head extends Component {
             {/*</ul>*/}
             {/*</ul>*/}
             <ul>
-              <li><a class="text-white" href="/">Home</a></li>
+              <li><Link class="text-white" to="/">Home</Link></li>
               <li><a class="text-white" href="/players">Players</a></li>
-              <li><a class="text-white" href="/countries">Nations</a></li>
-              <li><a class="text-white" href="/teams">Clubs</a></li>
-              <li class="margin-right-25 float-right" hidden={this.state.isAuth}><a class="text-white" href="" hidden={this.state.isAuth}>Sign up</a></li>
-              <li class="float-right" hidden={this.state.isAuth}><a class="text-white" href="" hidden={this.state.isAuth}>Sign in</a></li>
+              <li><Link class="text-white" to="/countries">Nations</Link></li>
+              <li><Link class="text-white" to="/teams">Clubs</Link></li>
+              <li class="margin-right-25 float-right" hidden={this.state.isAuth}><a class="text-white" href="/signup" hidden={this.state.isAuth}>Sign up</a></li>
+              <li class="float-right" hidden={this.state.isAuth}><a class="text-white" href="/signin" hidden={this.state.isAuth}>Sign in</a></li>
 
               <li class="margin-right-25 float-right" hidden={!this.state.isAuth}><div class="text-white" hidden={!this.state.isAuth}>{this.state.login}</div></li>
-              <li class="float-right" hidden={!this.state.isAuth}><a class="text-white" href="" hidden={!this.state.isAuth}>Favorites</a></li>
+              <li class="float-right" hidden={!this.state.isAuth}><Link class="text-white" to="/favorite" hidden={!this.state.isAuth}>Favorites</Link></li>
             </ul>
           </div>
         </nav>
