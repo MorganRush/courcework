@@ -7,21 +7,30 @@ const env = process.env.NODE_ENV || 'development';
 const config = require(`${__dirname}/../config/config.json`)[env];
 const db = {};
 
-let sequelize;
-if (config.use_env_variable) {
-    sequelize = new Sequelize(process.env[config.use_env_variable], {
-        ssl: true,
-        dialectOptions: {
-            ssl: {
-                require: true
-            }
-        }
-    });
-} else {
-    sequelize = new Sequelize(
-        config.database, config.username, config.password, config
-    );
-}
+const sequelize = new Sequelize('postgres://mmxcxsfnpnucsz:ccdba59bddd30de77136258f309ba0c3d19956125948112da4711491c6666471@ec2-54-197-254-189.compute-1.amazonaws.com:5432/dcmfh2o15unikr?ssl=true', {
+  ssl: true,
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      require: true
+    }
+  }
+});
+
+// if (config.use_env_variable) {
+//     sequelize = new Sequelize(process.env[config.use_env_variable], {
+//         ssl: true,
+//         dialectOptions: {
+//             ssl: {
+//                 require: true
+//             }
+//         }
+//     });
+// } else {
+//     sequelize = new Sequelize(
+//         config.database, config.username, config.password, config
+//     );
+// }
 
 // const sequelize = new Sequelize(
 //     configJS.db.database,
