@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a724ebe-f2c7-4c70-b717-98e155f1ad0a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/server/controller/favoritesController.js" afterPath="$PROJECT_DIR$/server/controller/favoritesController.js" />
+      <change beforePath="$PROJECT_DIR$/server/frontend/components/css/head.css" afterPath="$PROJECT_DIR$/server/frontend/components/css/head.css" />
+      <change beforePath="$PROJECT_DIR$/server/frontend/components/css/player.css" afterPath="$PROJECT_DIR$/server/frontend/components/css/player.css" />
       <change beforePath="$PROJECT_DIR$/server/frontend/components/favorite.js" afterPath="$PROJECT_DIR$/server/frontend/components/favorite.js" />
-      <change beforePath="$PROJECT_DIR$/server/frontend/components/part/head.js" afterPath="$PROJECT_DIR$/server/frontend/components/part/head.js" />
-      <change beforePath="$PROJECT_DIR$/server/routes/index.js" afterPath="$PROJECT_DIR$/server/routes/index.js" />
+      <change beforePath="$PROJECT_DIR$/server/frontend/components/home.js" afterPath="$PROJECT_DIR$/server/frontend/components/home.js" />
+      <change beforePath="$PROJECT_DIR$/server/frontend/components/listOfContracts.js" afterPath="$PROJECT_DIR$/server/frontend/components/listOfContracts.js" />
       <change beforePath="$PROJECT_DIR$/server/static/build/bundle.js" afterPath="$PROJECT_DIR$/server/static/build/bundle.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,8 +65,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="51" column="2" lean-forward="false" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
+            <state relative-caret-position="306">
+              <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -73,8 +75,8 @@
       <file leaf-file-name="listOfContracts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/frontend/components/listOfContracts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="98" column="27" lean-forward="false" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="27" />
+            <state relative-caret-position="211">
+              <caret line="234" column="66" lean-forward="false" selection-start-line="234" selection-start-column="66" selection-end-line="234" selection-end-column="66" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="n#!!block;n#constructor#0;n#ListOfContract#0" expanded="false" />
@@ -89,11 +91,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="favorite.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="player.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/frontend/components/player.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-283">
+              <caret line="77" column="3" lean-forward="false" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
+              <folding>
+                <element signature="n#!!block;n#componentDidMount#0;n#Player#0" expanded="false" />
+                <element signature="n#!!block;n#addPlayer#0;n#Player#0" expanded="false" />
+                <element signature="n#!!block;n#loadName#0;n#Player#0" expanded="false" />
+                <element signature="n#!!block;n#commentSend#0;n#Player#0" expanded="false" />
+                <element signature="e#2217#2575#0" expanded="false" />
+                <element signature="e#2590#5512#0" expanded="false" />
+                <element signature="e#5527#16944#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/frontend/components/favorite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="209" column="52" lean-forward="false" selection-start-line="209" selection-start-column="52" selection-end-line="209" selection-end-column="52" />
+            <state relative-caret-position="240">
+              <caret line="211" column="56" lean-forward="false" selection-start-line="211" selection-start-column="56" selection-end-line="211" selection-end-column="56" />
               <folding>
                 <element signature="n#!!block;n#handleScrollCallback#0;n#Favorite#0" expanded="false" />
                 <element signature="n#!!block;n#loadName#0;n#Favorite#0" expanded="false" />
@@ -105,11 +125,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="favoritesController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controller/favoritesController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/frontend/components/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+            <state relative-caret-position="311">
+              <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/frontend/components/css/head.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="161" column="22" lean-forward="false" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/frontend/components/css/player.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="145" column="17" lean-forward="true" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -160,7 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/models/contracts.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180308114602-create-contracts.js" />
         <option value="$PROJECT_DIR$/server/models/characteristics.js" />
         <option value="$PROJECT_DIR$/server/migrations/20180408123649-create-characteristics.js" />
@@ -197,20 +246,21 @@
         <option value="$PROJECT_DIR$/server/frontend/reducer/player.js" />
         <option value="$PROJECT_DIR$/server/frontend/reducer/user.js" />
         <option value="$PROJECT_DIR$/server/frontend/index.js" />
-        <option value="$PROJECT_DIR$/server/frontend/components/home.js" />
         <option value="$PROJECT_DIR$/server/controller/contractsController.js" />
         <option value="$PROJECT_DIR$/server/controller/commentsController.js" />
         <option value="$PROJECT_DIR$/server/frontend/components/listOfCountries.js" />
         <option value="$PROJECT_DIR$/server/frontend/components/player.js" />
-        <option value="$PROJECT_DIR$/server/controller/favoritesController.js" />
-        <option value="$PROJECT_DIR$/server/frontend/components/listOfContracts.js" />
-        <option value="$PROJECT_DIR$/server/frontend/components/css/head.css" />
         <option value="$PROJECT_DIR$/server/frontend/components/css/listOfContracts.css" />
         <option value="$PROJECT_DIR$/server/config/config.json" />
         <option value="$PROJECT_DIR$/server/models/index.js" />
         <option value="$PROJECT_DIR$/server/frontend/components/part/head.js" />
         <option value="$PROJECT_DIR$/server/routes/index.js" />
         <option value="$PROJECT_DIR$/server/frontend/components/favorite.js" />
+        <option value="$PROJECT_DIR$/server/controller/favoritesController.js" />
+        <option value="$PROJECT_DIR$/server/frontend/components/listOfContracts.js" />
+        <option value="$PROJECT_DIR$/server/frontend/components/home.js" />
+        <option value="$PROJECT_DIR$/server/frontend/components/css/head.css" />
+        <option value="$PROJECT_DIR$/server/frontend/components/css/player.css" />
       </list>
     </option>
   </component>
@@ -291,12 +341,6 @@
               <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
               <item name="courcework" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="courcework" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -305,6 +349,22 @@
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courcework" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="courcework" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="part" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="courcework" type="b2602c69:ProjectViewProjectNode" />
@@ -479,12 +539,12 @@
       <workItem from="1523702898566" duration="20523000" />
       <workItem from="1523735233953" duration="80000" />
       <workItem from="1523735325085" duration="52801000" />
-      <workItem from="1523853803904" duration="17369000" />
+      <workItem from="1523853803904" duration="19455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326746000" />
+    <option name="totallyTimeSpent" value="328832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -740,24 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/frontend/components/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="77" column="3" lean-forward="false" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-            <element signature="n#!!block;n#componentDidMount#0;n#Player#0" expanded="false" />
-            <element signature="n#!!block;n#addPlayer#0;n#Player#0" expanded="false" />
-            <element signature="n#!!block;n#loadName#0;n#Player#0" expanded="false" />
-            <element signature="n#!!block;n#commentSend#0;n#Player#0" expanded="false" />
-            <element signature="n#!!block;n#render#0;n#Player#0" expanded="false" />
-            <element signature="e#2217#2575#0" expanded="false" />
-            <element signature="e#2590#5512#0" expanded="false" />
-            <element signature="e#5527#16944#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/controller/countriesController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
@@ -774,26 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/controller/favoritesController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/controller/playerController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="60" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/frontend/components/css/head.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="157" column="20" lean-forward="false" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -841,14 +867,6 @@
     <entry file="file://$PROJECT_DIR$/server/frontend/components/img/fifa18watermark.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/frontend/components/css/player.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/frontend/components/css/listOfTeams.css">
@@ -939,16 +957,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="51" column="2" lean-forward="false" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
+        <state relative-caret-position="306">
+          <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controller/favoritesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/frontend/components/favorite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="211" column="56" lean-forward="false" selection-start-line="211" selection-start-column="56" selection-end-line="211" selection-end-column="56" />
+          <folding>
+            <element signature="n#!!block;n#handleScrollCallback#0;n#Favorite#0" expanded="false" />
+            <element signature="n#!!block;n#loadName#0;n#Favorite#0" expanded="false" />
+            <element signature="e#3344#3647#0" expanded="false" />
+            <element signature="e#3730#4203#0" expanded="false" />
+            <element signature="e#4216#4982#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/frontend/components/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/frontend/components/listOfContracts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="98" column="27" lean-forward="false" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="27" />
+        <state relative-caret-position="211">
+          <caret line="234" column="66" lean-forward="false" selection-start-line="234" selection-start-column="66" selection-end-line="234" selection-end-column="66" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="n#!!block;n#constructor#0;n#ListOfContract#0" expanded="false" />
@@ -962,25 +1010,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/frontend/components/home.js">
+    <entry file="file://$PROJECT_DIR$/server/frontend/components/css/head.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        <state relative-caret-position="369">
+          <caret line="161" column="22" lean-forward="false" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/frontend/components/favorite.js">
+    <entry file="file://$PROJECT_DIR$/server/frontend/components/player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="209" column="52" lean-forward="false" selection-start-line="209" selection-start-column="52" selection-end-line="209" selection-end-column="52" />
+        <state relative-caret-position="-283">
+          <caret line="77" column="3" lean-forward="false" selection-start-line="77" selection-start-column="3" selection-end-line="77" selection-end-column="3" />
           <folding>
-            <element signature="n#!!block;n#handleScrollCallback#0;n#Favorite#0" expanded="false" />
-            <element signature="n#!!block;n#loadName#0;n#Favorite#0" expanded="false" />
-            <element signature="e#3344#3647#0" expanded="false" />
-            <element signature="e#3730#4203#0" expanded="false" />
-            <element signature="e#4216#4982#0" expanded="false" />
+            <element signature="n#!!block;n#componentDidMount#0;n#Player#0" expanded="false" />
+            <element signature="n#!!block;n#addPlayer#0;n#Player#0" expanded="false" />
+            <element signature="n#!!block;n#loadName#0;n#Player#0" expanded="false" />
+            <element signature="n#!!block;n#commentSend#0;n#Player#0" expanded="false" />
+            <element signature="e#2217#2575#0" expanded="false" />
+            <element signature="e#2590#5512#0" expanded="false" />
+            <element signature="e#5527#16944#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/frontend/components/css/player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="145" column="17" lean-forward="true" selection-start-line="145" selection-start-column="17" selection-end-line="145" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

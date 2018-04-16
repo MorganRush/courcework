@@ -232,6 +232,7 @@ class ListOfContract extends Component {
                             cache: false,
                             success: function (data) {
                               this.setState({isAuth: true});
+                              alert('Player added to favorites!');
                             }.bind(this),
                             error: function (xhr, status, err) {
                               console.error('/main/add/comment/' + id, status, err.toString());

@@ -49,7 +49,7 @@ class Home extends Component {
             <Link class="walkway-oblique oblique home-ref" to="/countries">Nations</Link>
             <Link class="walkway-oblique oblique home-ref" to="/teams">Clubs</Link>
           </div>
-          <iframe class="text-center" src="https://player.twitch.tv/?channel=paxarena" frameborder="0"
+          <iframe class="text-center hidden-twitch" src="https://player.twitch.tv/?channel=paxarena" frameborder="0"
                   allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
         </div>
       </div>

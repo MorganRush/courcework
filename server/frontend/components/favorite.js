@@ -209,6 +209,7 @@ class Favorite extends Component {
                               this.props.onDeleteContracts();
                               this.state.offset = 0;
                               this.addContracts();
+                              alert('Player deleted from favorites!');
                             }.bind(this),
                             error: function (xhr, status, err) {
                               console.error('/main/add/comment/' + id, status, err.toString());
